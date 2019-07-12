@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta description="author" name="Paul Guerin">
+    <meta description="keywords" name="jeu, jeux, session">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/global_margin_and_fonts.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/header.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/main.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/media_query.css") }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+
+<header>
+
+    <!-- Filtre recouvrant l'écran lors de l'ouverture du menu burger -->
+    <div class="filter"></div>
+    <!-- Filtre recouvrant l'écran lors de l'ouverture du menu burger -->
+
+    <div class="container-fluid mainDarkBackground">
+
+        <!-- Première partie du header responsive contenant le logo et le menu de l'avatar + les notifications et messages en dessous de 1000px-->
+        <div class="row justify-content-between align-items-center">
+
+            <!-- Menu burger, n'apparait qu'à partir de 576px (media Query) -->
+            <div class="col-1 d-lg-none d-sm-none d-md-none d-xl-none burgerMenu">
+                <ul class="list-unstyled pb-2">
+                    <li class="sidebarClick position-absolute"><img src="{{ asset("assets/img/burger-menu.png") }}" alt="Menu burger" class="logoSmartphone menuBurgerLogo">
+                        <ul class="list-unstyled sidebar position-relative">
+                            <li class="navButtonsSidebar d-flex border-bottom border-light">
+                                <a href="#" class="d-flex">
+                                    <img src="{{ asset("assets/img/cardswhite.png") }}" alt="Logo de cartes dans le bouton des sessions de la barre de navigation" class="imgNavSidebar">
+                                    <span class="navFontSidebar pt-1 pl-1">Mes sessions</span>
+                                </a>
+                            </li>
+                            <li class="navButtonsSidebar d-flex border-bottom border-light">
+                                <a href="#" class="d-flex">
+                                    <img src="{{ asset("assets/img/Search_logo_white.png") }}" alt="Logo de loupe dans le bouton de recherche de sessions de la barre de navigation" class="imgNavSidebar">
+                                    <span class="navFontSidebar pt-1 pl-1">Chercher une session</span>
+                                </a>
+                            </li>
+                            <li class="navButtonsSidebar d-flex border-bottom border-light">
+                                <a href="#" class="d-flex">
+                                    <img src="{{ asset("assets/img/Dices_sidebar.png") }}" alt="Logo de dés dans le bouton de création de session de la barre de navigation" class="imgNavSidebar">
+                                    <span class="navFontSidebar pt-1 pl-1">Créer une session</span>
+                                </a>
+                            </li>
+                            <li class="navButtonsSidebar d-flex border-bottom border-light">
+                                <a href="#" class="d-flex">
+                                    <img src="{{ asset("assets/img/calendar_sidebar_white.png") }}" alt="Logo de calendrier dans le bouton mon calendrier de la barre de navigation" class="imgNavSidebar">
+                                    <span class="navFontSidebar pt-1 pl-1">Mon calendrier</span>
+                                </a>
+                            </li>
+                            <li class="navButtonsSidebar d-flex border-bottom border-light">
+                                <a href="#" class="d-flex">
+                                    <img src="{{ asset("assets/img/book_sidebar_white.png") }}" alt="Logo de cartes dans le bouton des sessions de la barre de navigation" class="imgNavSidebar">
+                                    <span class="navFontSidebar pt-1 pl-1">Annuaire des jeux</span>
+                                </a>
+                            </li>
+                            <li class="navButtonsSidebar d-flex border-bottom border-light">
+                                <a href="#" class="d-flex">
+                                    <img src="{{ asset("assets/img/fav_icon.png") }}" alt="Logo d'étoile de favoris" class="imgNavSidebar">
+                                    <span class="navFontSidebar pt-1 pl-1">Favoris</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Menu burger, n'apparait qu'à partir de 576px (Media Query)-->
+
+            <!-- Logo du site (change selon la taille de l'écran) -->
+            <div class="col-4 d-lg-none">
+                <h1 class="m-0"><a href="#" class="d-flex align-items-center"><img src="{{ asset("assets/img/logoSmall.png") }}" alt="Logo Find_a_table" class="logoSmartphone pt-1"></a></h1>
+            </div>
+            <div class="d-none d-lg-block col-lg-4 m-0">
+                <h1 class="m-0"><a href="#">
+                        <img src="{{ asset("assets/img/Logo_home.png") }}" alt="Icone d'accueil" class="logo_hide">
+                    </a></h1>
+                <h1 class="m-0"><a href="#">
+                        <img src="{{ asset("assets/img/Logo.png") }}" alt="Logo Find_a_table suivi de 3 dés de couleurs verte, violette et bleu" class="logo">
+                    </a></h1>
+            </div>
+            <!-- Logo du site (change selon la taille de l'écran) -->
+
+            <!-- Pictogrames de notification et de messagerie, n'apparaissent qu'à partir de 576px (media Query) -->
+            <div class="col-1 smallNav pr-5 position-relative">
+                <a href="#"><img src="{{ asset("assets/img/bell.png") }}" alt="Logo de cloche de notification" class="imgPictoSmall dropdownNotifications"></a>
+                <!-- Dropdown de notifications -->
+                <div class="notificationDiv">
+
+                </div>
+                <!-- Dropdown de notifications -->
+                <a href="#" class="ml-2"><img src="{{ asset("assets/img/email_icon.png") }}" alt="Logo de mail" class="imgPictoSmall"></a>
+            </div>
+            <!-- Pictogrames de notification et de messagerie, n'apparaissent qu'à partir de 576px (media Query) -->
+
+            <!-- Avatar de l'utilisateur et menu dropdown utilisateur -->
+            <div class="col-1">
+                <div class="row justify-content-end align-items-center">
+                    <div class="col-12 col-lg-10 mr-4 position-relative dropdownHover">
+                        <img src="{{ asset("assets/img/avatar.png") }}" alt="Image de l'avatar de l'utilisateur" class="avatarImg">
+                        <ul class="dropdownMenu list-unstyled">
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#">Editer profil</a></li>
+                            <li><a href="#">Annuaire des membres</a></li>
+                            <li><a href="#">Déconnection</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Avatar de l'utilisateur et menu dropdown utilisateur -->
+        </div>
+        <!-- Première partie du header responsive contenant le logo et le menu de l'avatar + les notifications et messages en dessous de 1000px -->
+
+        <!-- Navbar responsive qui disparait en dessous de 576px -->
+        <nav>
+            <div class="navbarBottomMode py-1">
+                <ul class="navFirstHalf list-unstyled py-0 my-0">
+                    <li class="navButtons d-flex align-items-center px-1">
+                        <a href="#" class="d-flex justify-content-around">
+                            <img src="{{ asset("assets/img/cardswhite.png") }}" alt="Logo de cartes dans le bouton des sessions de la barre de navigation" class="imgNav ml-2 mt-1">
+                            <span class="navFont ml-1 mr-2 mb-1 text-align-center">Mes sessions</span>
+                        </a>
+                    </li>
+                    <li class="navButtons d-flex align-items-center px-1 ml-2">
+                        <a href="#" class="d-flex justify-content-around">
+                            <img src="{{ asset("assets/img/Search_logo_white.png") }}" alt="Logo de loupe dans le bouton de recherche de sessions de la barre de navigation" class="imgNav ml-2 mt-1">
+                            <span class="navFont ml-1 mr-2 mb-1 text-align-center">Chercher une session</span>
+                        </a>
+                    </li>
+                    <li class="navButtons d-flex align-items-center px-1 ml-2">
+                        <a href="#" class="d-flex justify-content-around">
+                            <img src="{{ asset("assets/img/Dices_sidebar.png") }}" alt="Logo de dés dans le bouton de création de session de la barre de navigation" class="imgNav ml-2 mt-1">
+                            <span class="navFont ml-1 mr-2 mb-1 text-align-center">Créer une session</span>
+                        </a>
+                    </li>
+                    <li class="navButtons d-flex align-items-center px-1 ml-2">
+                        <a href="#" class="d-flex justify-content-around">
+                            <img src="{{ asset("assets/img/calendar_sidebar_white.png") }}" alt="Logo de calendrier dans le bouton mon calendrier de la barre de navigation" class="imgNav ml-2 mt-1">
+                            <span class="navFont ml-1 mr-2 mb-1 text-align-center">Mon calendrier</span>
+                        </a>
+                    </li>
+                    <li class="navButtons d-flex align-items-center px-1 ml-2">
+                        <a href="#" class="d-flex justify-content-around">
+                            <img src="{{ asset("assets/img/book_sidebar_white.png") }}" alt="Logo de cartes dans le bouton des sessions de la barre de navigation" class="imgNav ml-2 mt-1">
+                            <span class="navFont ml-1 mr-2 mb-1 text-align-center">Annuaire des jeux</span>
+                        </a>
+                    </li>
+                    <li class="navButtons d-flex align-items-center px-1 ml-2">
+                        <a href="#" class="d-flex justify-content-around">
+                            <img src="{{ asset("assets/img/fav_icon.png") }}" alt="Logo d'étoile de favoris" class="imgNav ml-2 mt-1">
+                            <span class="navFont ml-1 mr-2 mb-1 text-align-center">Favoris</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbarSecondHalf d-flex px-1 mr-4 list-unstyled py-0 my-0 position-relative">
+                    <li><a href="#"><img src="{{ asset("assets/img/bell.png") }}" alt="Logo de cloche de notification" class="imgPicto pr-2 dropdownNotifications2"></a></li>
+                    <!-- Dropdown de notifications -->
+                    <div class="notificationDiv2">
+
+                    </div>
+                    <!-- Dropdown de notifications -->
+                    <li><a href="#" class="linkMessage"><img src="{{ asset("assets/img/email_icon.png") }}" alt="Logo de mail" class="imgPicto pr-3"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar responsive qui disparait en dessous de 576px -->
+    </div>
+</header>
+
+<main>
+    {% block main %}
+    {% endblock %}
+</main>
+
+<footer>
+
+</footer>
+<script type="text/javascript" src="{{ asset("assets/js/script.js") }}"></script>
+</body>
+</html>

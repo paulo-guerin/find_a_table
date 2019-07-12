@@ -1,0 +1,24 @@
+/* Marges et padding */
+*{
+    margin:0;
+    padding: 0;
+}
+/* Marges globales */
+
+/* Fonts */
+@font-face{
+    font-family: "dancingScriptRegular";
+    src:url(../fonts/DancingScript-Regular.ttf);
+}
+
+@font-face{
+    font-family: "dancingScriptBold";
+    src:url(../fonts/DancingScript-Bold.ttf);
+}
+
+@font-face{
+    font-family: "bungeeInline";
+    src:url(../fonts/BungeeInline-Regular.ttf);
+}
+/* Fonts */
+
