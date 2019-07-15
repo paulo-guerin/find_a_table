@@ -2,64 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f5c9853-b176-4e48-8bdc-1933fb43118a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/global_margin_and_fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/media_query.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/Augusta-Shadow.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/Augusta.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/BungeeInline-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/DancingScript-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/DancingScript-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/Font_names.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/7-wonders-vf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Dices_sidebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Dices_without_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Logo.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Logo_home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Logo_hover.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Nous_contacter_logo_sidebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Scroll-Transparent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Search_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Search_logo_searchbar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/Search_logo_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/backgroundWood.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/bell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/bell.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/bell_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/book_sidebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/book_sidebar_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/burger-menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/calendar_sidebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/calendar_sidebar_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/cards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/cardswhite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/clock-icon-pngd9d-4f23-bd38-eef08f41109f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/email_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/fav_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/flagIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/inc_pot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/logoSmall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/maxPlayersIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/new_calendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/people_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/scoreIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/scoreIcon.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/timeIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/GamesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/games_index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/header_template.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,24 +22,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/GamesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/games_index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="68" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/header.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -102,11 +30,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -196,6 +142,7 @@
         <option value="$PROJECT_DIR$/templates/header_template.html.twig" />
         <option value="$PROJECT_DIR$/public/assets/css/global_margin_and_fonts.css" />
         <option value="$PROJECT_DIR$/public/assets/css/main.css" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -340,41 +287,12 @@
             <path>
               <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
               <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
               <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -384,8 +302,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -420,18 +339,22 @@
       <updated>1562858179854</updated>
       <workItem from="1562858181620" duration="1527000" />
       <workItem from="1562920951883" duration="7455000" />
-      <workItem from="1562932958681" duration="147000" />
+      <workItem from="1562932958681" duration="1989000" />
+      <workItem from="1562938763190" duration="1934000" />
+      <workItem from="1563177665224" duration="7000" />
+      <workItem from="1563178579979" duration="35000" />
+      <workItem from="1563191863438" duration="347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9129000" />
+    <option name="totallyTimeSpent" value="13294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17114094" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18053691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -444,7 +367,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -476,6 +399,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -533,10 +463,17 @@
     <entry file="file://$PROJECT_DIR$/public/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        <state relative-caret-position="306">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
         </state>
       </provider>
     </entry>
