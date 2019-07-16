@@ -61,6 +61,11 @@ class Users
      */
     private $score;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $IDTown;
+
     public function getId(): ?int
     {
         return $this->id;

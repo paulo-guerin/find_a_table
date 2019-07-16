@@ -51,6 +51,11 @@ class Games
      */
     private $status;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $IDCategory;
+
     public function getId(): ?int
     {
         return $this->id;
