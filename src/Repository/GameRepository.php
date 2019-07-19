@@ -2,25 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\GameComScore;
+use App\Entity\Game;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method GameComScore|null find($id, $lockMode = null, $lockVersion = null)
- * @method GameComScore|null findOneBy(array $criteria, array $orderBy = null)
- * @method GameComScore[]    findAll()
- * @method GameComScore[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Game|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Game|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Game[]    findAll()
+ * @method Game[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class GameComScoreRepository extends ServiceEntityRepository
+class GameRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, GameComScore::class);
+        parent::__construct($registry, Game::class);
     }
 
+
+
     // /**
-    //  * @return GameComScore[] Returns an array of GameComScore objects
+    //  * @return Game[] Returns an array of Game objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +39,7 @@ class GameComScoreRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?GameComScore
+    public function findOneBySomeField($value): ?Game
     {
         return $this->createQueryBuilder('g')
             ->andWhere('g.exampleField = :val')

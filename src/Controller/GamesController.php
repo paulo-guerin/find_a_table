@@ -6,10 +6,10 @@
 
     class GamesController extends AbstractController{
         /**
-         * @Route("games_index", name="games_index")
+         * @Route("games/games_index", name="games_index")
          */
         public function games_index(){
-            return $this->render("games_index.html.twig");
+            return $this->render("games/games_index.html.twig");
         }
     }
 

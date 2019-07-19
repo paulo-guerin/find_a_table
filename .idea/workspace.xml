@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f5c9853-b176-4e48-8bdc-1933fb43118a" name="Default Changelist" comment="" />
+    <list default="true" id="1f5c9853-b176-4e48-8bdc-1933fb43118a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/sessions/sessions_index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/GamesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GamesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ChatMessage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Favourites.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/GameComScore.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Games.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/IntraMessages.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Notifications.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/SenderMessageReceiver.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Sessions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Towns.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/UserListBySession.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20190715121437.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20190716081035.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20190716085555.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20190716092304.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20190716115228.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20190716124903.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20190716150701.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoriesRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ChatMessageRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/FavouritesRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/GameComScoreRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/GamesRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/IntraMessagesRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/NotificationsRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/SenderMessageReceiverRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/SessionsRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TownsRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserListBySessionRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UsersRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/games_index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/games/games_index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header_template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head_header_footer/header_template.html.twig" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +54,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/header_template.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/Controller/GamesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+              <folding>
+                <element signature="e#41#106#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/sessions/sessions_index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/games/games_index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/SessionsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#34#99#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repository/CategoryRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+              <folding>
+                <element signature="e#34#58#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repository/GameRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Game.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+              <folding>
+                <element signature="e#30#78#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/head_header_footer/header_template.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
@@ -25,100 +146,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Games.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" column="30" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Users.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Entity/IntraMessages.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Categories.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/ChatMessage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/GameComScore.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19754">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#25768#26002#2" expanded="true" />
-                <element signature="e#26806#26959#1" expanded="true" />
-                <element signature="e#26999#27233#1" expanded="true" />
-                <element signature="e#30239#30515#2" expanded="true" />
-                <element signature="e#31347#31500#1" expanded="true" />
-                <element signature="e#31540#31816#1" expanded="true" />
-                <element signature="e#61072#61259#2" expanded="true" />
-                <element signature="e#61488#61624#2" expanded="true" />
-                <element signature="e#62027#62160#2" expanded="true" />
-                <element signature="e#63642#63795#1" expanded="true" />
-                <element signature="e#75788#76018#2" expanded="true" />
-                <element signature="e#76885#77121#2" expanded="true" />
-                <element signature="e#106714#106891#2" expanded="true" />
-                <element signature="e#106937#107114#2" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/global_margin_and_fonts.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/index.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>depa</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,7 +164,6 @@
         <option value="$PROJECT_DIR$/public/assets/css/media_query.css" />
         <option value="$PROJECT_DIR$/public/assets/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/templates/games.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/GamesController.php" />
         <option value="$PROJECT_DIR$/public/assets/js/script.js" />
         <option value="$PROJECT_DIR$/templates/games_index.html.twig" />
         <option value="$PROJECT_DIR$/templates/header_template.html.twig" />
@@ -139,9 +171,19 @@
         <option value="$PROJECT_DIR$/public/assets/css/main.css" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Entity/ChatMessage.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Games.php" />
         <option value="$PROJECT_DIR$/src/Entity/Users.php" />
         <option value="$PROJECT_DIR$/src/Entity/IntraMessages.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Towns.php" />
+        <option value="$PROJECT_DIR$/src/Controller/SessionsController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/GamesController.php" />
+        <option value="$PROJECT_DIR$/templates/games/games_index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/sessions_index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/sessions/sessions_index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Games.php" />
+        <option value="$PROJECT_DIR$/src/Repository/CategoryRepository.php" />
+        <option value="$PROJECT_DIR$/src/Repository/GameRepository.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Game.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Category.php" />
       </list>
     </option>
   </component>
@@ -255,17 +297,6 @@
       <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
     </include_path>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/find_a_table.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/php.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="width" value="977" />
@@ -276,6 +307,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,6 +329,12 @@
               <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
               <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
+              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -311,11 +349,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
+              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,13 +365,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../cours_symfony/library" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\find_a_table\templates\sessions" />
+      <recent name="C:\wamp64\www\find_a_table\templates\head_header_footer" />
+      <recent name="C:\wamp64\www\find_a_table\templates\games" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\find_a_table\public\assets\fonts" />
       <recent name="C:\wamp64\www\find_a_table\public\assets\img" />
@@ -365,17 +415,20 @@
       <workItem from="1563178579979" duration="35000" />
       <workItem from="1563191863438" duration="946000" />
       <workItem from="1563194451813" duration="2037000" />
-      <workItem from="1563262889566" duration="8378000" />
+      <workItem from="1563262889566" duration="11455000" />
+      <workItem from="1563348064845" duration="23000" />
+      <workItem from="1563541640309" duration="5143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24308000" />
+    <option name="totallyTimeSpent" value="32551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="781" height="830" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38418862" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2773925" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -388,7 +441,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28653294" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28510028" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -402,20 +455,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/assets/css/style.css" />
     <entry file="file://$PROJECT_DIR$/public/assets/css/fonts.css" />
-    <entry file="file://$PROJECT_DIR$/src/Controller/GamesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/games_index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="68" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -468,6 +507,48 @@
     <entry file="file://$PROJECT_DIR$/public/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/IntraMessages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/TownsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Towns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/ChatMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/GameComScore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19754">
@@ -491,52 +572,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header_template.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/sessions_index" />
+    <entry file="file://$PROJECT_DIR$/src/Controller/GamesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="e#41#106#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/games/games_index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/head_header_footer/header_template.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Categories.php">
+    <entry file="file://$PROJECT_DIR$/templates/sessions/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sessions/sessions_index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="323">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/ChatMessage.php">
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190715121437.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="62">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="e#64#96#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/GameComScore.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/SessionsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#34#99#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Users.php">
+    <entry file="file://$PROJECT_DIR$/src/Repository/CategoryRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+        <state relative-caret-position="209">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="e#34#58#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Games.php">
+    <entry file="file://$PROJECT_DIR$/src/Repository/GameRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="30" />
+        <state relative-caret-position="323">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/IntraMessages.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Game.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="338">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\GamesRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\GameRepository")
  */
-class Games
+class Game
 {
     /**
      * @ORM\Id()
@@ -17,7 +17,7 @@ class Games
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=500)
      */
     private $title;
 
@@ -39,7 +39,7 @@ class Games
     /**
      * @ORM\Column(type="string", length=500, nullable=true)
      */
-    private $picture;
+    private $image;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -54,7 +54,28 @@ class Games
     /**
      * @ORM\Column(type="integer")
      */
-    private $IDCategory;
+    private $categoryID;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="games")
+     */
+    private $category;
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category): void
+    {
+        $this->category = $category;
+    }
 
     public function getId(): ?int
     {
@@ -109,14 +130,14 @@ class Games
         return $this;
     }
 
-    public function getPicture(): ?string
+    public function getImage(): ?string
     {
-        return $this->picture;
+        return $this->image;
     }
 
-    public function setPicture(?string $picture): self
+    public function setImage(?string $image): self
     {
-        $this->picture = $picture;
+        $this->image = $image;
 
         return $this;
     }
@@ -141,6 +162,18 @@ class Games
     public function setStatus(int $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getCategoryID(): ?int
+    {
+        return $this->categoryID;
+    }
+
+    public function setCategoryID(int $categoryID): self
+    {
+        $this->categoryID = $categoryID;
 
         return $this;
     }
