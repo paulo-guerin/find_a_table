@@ -1,0 +1,418 @@
+/* Navbar responsive et menu burger */
+.mainDarkBackground {
+  position: relative;
+  z-index: 2;
+  background-color: #1f2e49;
+  position: fixed;
+  border-bottom: solid 2px white; }
+
+.mainTitle {
+  color: #ffe7c8;
+  font-size: 45px;
+  font-family: "dancingScriptBold"; }
+
+.logo {
+  height: 40px;
+  width: auto; }
+
+.logo_hide {
+  height: 40px;
+  width: auto; }
+
+.logoSmartphone {
+  height: 28px;
+  width: auto; }
+
+.avatarImg {
+  height: 50px;
+  width: auto;
+  border-radius: 100px; }
+
+.dropdownMenu {
+  position: absolute;
+  top: 45px;
+  right: 0px;
+  width: 200px;
+  background-color: #1f2e49;
+  border: solid 2px black;
+  display: none;
+  font-family: "dancingScriptBold";
+  font-size: 20px;
+  z-index: 3; }
+
+.dropdownHover:hover .dropdownMenu {
+  display: block; }
+
+.dropdownMenu li {
+  margin: 5px 5px; }
+
+.navButtons {
+  border-right: double rgba(255, 255, 255, 0.61) 1px; }
+
+.navButtons a, .navButtonsSidebar a {
+  text-decoration: none; }
+
+.imgNav, .imgNavSidebar {
+  height: 20px;
+  width: auto; }
+
+.imgPicto {
+  height: 25px;
+  width: auto; }
+
+.imgPictoSmall {
+  height: 20px;
+  width: auto; }
+
+.navFirstHalf {
+  display: flex; }
+
+.navFont, .navFontSidebar {
+  color: #fceede;
+  font-size: 16px; }
+
+.navFontSidebar {
+  font-size: 10px; }
+
+.navButtons:hover, .navButtonsSidebar:hover {
+  background-color: white; }
+
+.navButtons:hover span, .navButtonsSidebar:hover span {
+  color: #33363b; }
+
+.navButtons:hover img, .navButtonsSidebar:hover img {
+  filter: invert(100%); }
+
+.navbarBottomMode {
+  display: flex;
+  justify-content: space-between; }
+
+.smallNav {
+  display: none; }
+
+.menuBurgerLogo {
+  height: 23px;
+  width: auto; }
+
+.sidebar {
+  z-index: 2;
+  top: 0px;
+  left: -16px;
+  width: 200px;
+  height: 92vh;
+  background-color: #33363b; }
+
+.filter {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.445);
+  height: 100vh;
+  width: 100vw;
+  z-index: 1; }
+
+.sidebar a {
+  width: 100%; }
+
+.sidebar .navButtonsSidebar + .navButtonsSidebar {
+  padding: 10px 10px;
+  margin: 10px 10px; }
+
+.navButtonsSidebar:first-child {
+  padding: 10px 10px;
+  margin: 0px 10px 10px 10px; }
+
+.notificationDiv, .notificationDiv2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  height: 300px;
+  background-color: #33363b;
+  border: solid 2px black;
+  font-family: "dancingScriptBold";
+  font-size: 20px;
+  z-index: 3; }
+
+.notificationDiv2 {
+  top: 28px; }
+
+.linkMessage {
+  width: 100%;
+  height: 100%; }
+
+.aNoMarginPadding {
+  margin-top: 0px; }
+
+/* Navbar responsive */
+/* Main container du body */
+main {
+  background-color: #fffaf4;
+  padding-top: 120px;
+  padding-bottom: 50px; }
+
+.mainContainer {
+  background-color: #fffaf4;
+  border: double 3px #33363b;
+  border-radius: 15px;
+  padding-bottom: 30px; }
+
+.pageTitle {
+  font-family: "dancingScriptBold";
+  font-size: 45px;
+  color: #33363b; }
+
+.doubleLine {
+  width: 100%;
+  border-bottom: solid 3px #33363b; }
+
+.sticker {
+  height: 185px;
+  background-color: #1f2e49;
+  border: double 2px #ffc400;
+  border-radius: 15px;
+  transition: box-shadow .3s; }
+
+.sticker:hover {
+  box-shadow: 0 0 20px #212121; }
+
+.stickerLink {
+  text-decoration: none; }
+
+.stickerLink:hover {
+  text-decoration: none; }
+
+.stickerRow {
+  height: 100%;
+  width: 100%; }
+
+.stickerImg {
+  height: 100%;
+  width: 100%; }
+
+.givenHeight {
+  height: 30px; }
+
+.imgResize {
+  width: 140%;
+  height: auto;
+  border-radius: 10px; }
+
+.gameTitle {
+  font-family: "dancingScriptRegular";
+  color: #fceede; }
+
+.pictoGame {
+  height: 28px; }
+
+.gamePictoDescription {
+  color: #fceede;
+  font-size: 15px; }
+
+.searchBar {
+  width: 200px;
+  border: solid 1px #212121;
+  border-radius: 5px;
+  background: #fff9f3;
+  box-shadow: 0 0 3px #212121; }
+
+.submitButton {
+  height: 30px;
+  width: 30px;
+  background-image: url("../img/Search_logo_searchbar.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.advancedSearch {
+  border: solid 1px black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  font-size: 14px; }
+
+.advancedSearch:hover {
+  text-decoration: none; }
+
+.imgResizeSessions {
+  height: 160px;
+  width: 180px;
+  border-radius: 15px; }
+
+.gameShowIcon {
+  filter: invert(100%);
+  height: 30px;
+  width: auto;
+  margin-left: 20px; }
+
+.gameShowTitle {
+  font-family: dancingScriptBold;
+  font-size: 40px; }
+
+.gameShowDescription {
+  background-color: #1f2e49;
+  border: double 2px #ffc400;
+  border-radius: 15px;
+  color: white;
+  padding: 10px; }
+
+.gameShowImage {
+  width: 100%;
+  height: auto; }
+
+/* Main container du body */
+/* Marges et padding */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* Marges globales */
+/* Fonts */
+@font-face {
+  font-family: "dancingScriptRegular";
+  src: url(../fonts/DancingScript-Regular.ttf); }
+@font-face {
+  font-family: "dancingScriptBold";
+  src: url(../fonts/DancingScript-Bold.ttf); }
+@font-face {
+  font-family: "bungeeInline";
+  src: url(../fonts/BungeeInline-Regular.ttf); }
+/* Fonts */
+/* Media query navbar et main */
+@media (max-width: 1200px) {
+  .gameTitle {
+    font-family: "dancingScriptRegular";
+    color: #fceede;
+    font-size: 18px; }
+
+  .pictoGame {
+    height: 24px; }
+
+  .gamePictoDescription {
+    color: #fceede;
+    font-size: 12px; }
+
+  .sticker h4 {
+    font-size: 24px; } }
+@media (max-width: 992px) {
+  .navFont {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; }
+
+  .imgNav, .imgPicto {
+    display: none; }
+
+  .avatarImg {
+    height: 40px;
+    width: auto; }
+
+  .smallNav {
+    display: flex; }
+
+  .dropdownMenu {
+    top: 30px; }
+
+  .notificationDiv2 {
+    display: none; }
+
+  main {
+    padding-top: 90px; }
+
+  .pageTitle {
+    font-size: 35px; }
+
+  .pictoGame {
+    height: 28px; }
+
+  .gamePictoDescription {
+    font-size: 15px; }
+
+  .searchBar {
+    width: 120px; }
+
+  .advancedSearch {
+    font-size: 12px; }
+
+  .imgResize {
+    width: 120px;
+    height: auto;
+    border-radius: 10px; } }
+@media (max-width: 775px) {
+  .pageTitle {
+    font-size: 25px; }
+
+  .searchBar, .submitButton {
+    display: none; }
+
+  .advancedSearch {
+    background-color: #212121;
+    color: white; }
+
+  .navFont {
+    font-size: 10px; }
+
+  .imgResize {
+    width: 100px;
+    height: auto;
+    border-radius: 10px; } }
+@media (max-width: 576px) {
+  .navbarBottomMode {
+    display: none; }
+
+  .avatarImg {
+    height: 35px;
+    width: auto; }
+
+  .burgerMenu {
+    display: block; }
+
+  main {
+    padding-top: 70px; }
+
+  .pageTitle {
+    font-size: 25px; }
+
+  .gamePictoDescription {
+    font-size: 12px; }
+
+  .pictoGame {
+    height: 22px; }
+
+  .imgResize {
+    width: 100px;
+    height: auto;
+    border-radius: 10px; } }
+@media (max-width: 440px) {
+  .gamePictoDescriptionHide {
+    display: none; }
+
+  .responsiveDisplay {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; }
+
+  .imgResize {
+    padding-top: 20px;
+    width: 100px;
+    height: auto;
+    border-radius: 10px; }
+
+  .gameDescription {
+    padding-left: 50px; }
+
+  .gameTitle {
+    width: 250px;
+    margin-left: -70px; } }
+@media (max-width: 290px) {
+  .logoSmartphone {
+    height: 24px;
+    width: auto; }
+
+  main {
+    padding-top: 55px; } }
+/* Media query navbar et main */
+
+/*# sourceMappingURL=index.css.map */

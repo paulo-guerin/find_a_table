@@ -1,0 +1,178 @@
+/* Navbar responsive et menu burger */
+.mainDarkBackground{
+  position: relative;
+  z-index:2;
+  background-color: rgb(31, 46, 73);
+  position: fixed;
+  border-bottom: solid 2px white;
+}
+
+.mainTitle{
+  color: rgb(255, 231, 200);
+  font-size: 45px;
+  font-family: "dancingScriptBold"
+}
+
+.logo{
+  height:40px;
+  width:auto;
+}
+
+.logo_hide{
+  height:40px;
+  width:auto;
+}
+
+.logoSmartphone{
+  height:28px;
+  width:auto;
+}
+
+.avatarImg{
+  height:50px;
+  width:auto;
+  border-radius:100px;
+}
+
+.dropdownMenu{
+  position: absolute;
+  top:45px;
+  right:0px;
+  width: 200px;
+  background-color: rgb(31, 46, 73);
+  border: solid 2px black;
+  display:none;
+  font-family: "dancingScriptBold";
+  font-size: 20px;
+  z-index: 3;
+}
+
+.dropdownHover:hover .dropdownMenu{
+  display:block;
+}
+
+.dropdownMenu li{
+  margin:5px 5px;
+}
+
+.navButtons{
+  border-right: double rgba(255, 255, 255, 0.61) 1px;
+}
+
+.navButtons a, .navButtonsSidebar a{
+  text-decoration:none;
+}
+
+.imgNav, .imgNavSidebar{
+  height:20px;
+  width:auto;
+}
+
+.imgPicto{
+  height:25px;
+  width:auto;
+}
+
+.imgPictoSmall{
+  height:20px;
+  width:auto;
+}
+.navFirstHalf{
+  display: flex;
+}
+
+.navFont, .navFontSidebar{
+  color:rgb(252, 238, 222);
+  font-size:16px;
+}
+
+.navFontSidebar{
+  font-size: 10px;
+}
+
+.navButtons:hover, .navButtonsSidebar:hover{
+  background-color:white;
+}
+
+.navButtons:hover span, .navButtonsSidebar:hover span{
+  color: rgb(51, 54, 59);
+}
+
+.navButtons:hover img, .navButtonsSidebar:hover img{
+  filter: invert(100%);
+}
+
+.navbarBottomMode{
+  display:flex;
+  justify-content:space-between;
+}
+
+.smallNav{
+  display:none;
+}
+
+.menuBurgerLogo{
+  height:23px;
+  width:auto;
+}
+
+.sidebar{
+  z-index:2;
+  top:0px;
+  left:-16px;
+  width:200px;
+  height: 92vh;
+  background-color: rgb(51, 54, 59);
+}
+
+.filter{
+  margin:0;
+  padding:0;
+  position: relative;
+  position: fixed;
+  top:0;
+  background-color: rgba(0, 0, 0, 0.445);
+  height:100vh;
+  width:100vw;
+  z-index:1;
+}
+
+.sidebar a{
+  width:100%;
+}
+
+.sidebar .navButtonsSidebar + .navButtonsSidebar{
+  padding: 10px 10px;
+  margin:10px 10px;
+}
+
+.navButtonsSidebar:first-child{
+  padding: 10px 10px;
+  margin:0px 10px 10px 10px;
+}
+
+.notificationDiv, .notificationDiv2{
+  position: absolute;
+  top:20px;
+  right: 20px;
+  width: 200px;
+  height:300px;
+  background-color: rgb(51, 54, 59);
+  border: solid 2px black;
+  font-family: "dancingScriptBold";
+  font-size: 20px;
+  z-index: 3;
+}
+
+.notificationDiv2{
+  top:28px;
+}
+
+.linkMessage{
+  width: 100%;
+  height: 100%;
+}
+.aNoMarginPadding{
+  margin-top: 0px;
+}
+/* Navbar responsive */

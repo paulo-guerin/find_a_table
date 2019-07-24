@@ -9,10 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/global_margin_and_fonts.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/header.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/main.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/media_query.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/index.css") }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 </head>
 
@@ -116,8 +113,11 @@
                                     <li><a href="{{ path("fos_user_security_logout") }}">Déconnection</a></li>
                                 </ul>
                             {% else %}
-                                <a href="{{ path("fos_user_registration_register") }}" class="connectionButton p-1">
+                                <a href="{{ path("fos_user_security_login") }}" class="connectionButton p-1">
                                     <span>Connection</span>
+                                </a>
+                                <a href="{{ path("fos_user_registration_register") }}" class="connectionButton p-1">
+                                    <span>Inscription</span>
                                 </a>
                             {% endif %}
                         </div>

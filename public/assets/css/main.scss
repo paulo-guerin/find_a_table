@@ -1,0 +1,136 @@
+$darkColor: rgb(51, 54, 59);
+$lightColor: rgb(255, 250, 244);
+/* Main container du body */
+main{
+  background-color: $lightColor;
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+.mainContainer{
+  background-color: rgb(255, 250, 244);
+  border: double 3px rgb(51, 54, 59);
+  border-radius: 15px;
+  padding-bottom:30px;
+}
+
+.pageTitle{
+  font-family: "dancingScriptBold";
+  font-size: 45px;
+  color: rgb(51, 54, 59);
+}
+
+.doubleLine{
+  width: 100%;
+  border-bottom: solid 3px rgb(51, 54, 59);
+}
+
+.sticker{
+  height:185px;
+  background-color: rgb(31, 46, 73);
+  border: double 2px rgb(255, 196, 0);
+  border-radius: 15px;
+  transition: box-shadow .3s;
+}
+
+.sticker:hover{
+  box-shadow: 0 0 20px rgb(33, 33, 33);
+}
+.stickerLink{
+  text-decoration: none;
+}
+
+.stickerLink:hover{
+  text-decoration: none;
+}
+
+.stickerRow{
+  height : 100%;
+  width: 100%;
+}
+
+.stickerImg{
+  height : 100%;
+  width: 100%;
+}
+
+.givenHeight{
+  height:30px;
+}
+.imgResize{
+  width:140%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gameTitle{
+  font-family: "dancingScriptRegular";
+  color: rgb(252, 238, 222);
+}
+.pictoGame{
+  height: 28px;
+}
+.gamePictoDescription{
+  color: rgb(252, 238, 222);
+  font-size: 15px;
+}
+
+.searchBar{
+  width: 200px;
+  border:solid 1px rgb(33, 33, 33);
+  border-radius: 5px;
+  background: rgb(255, 249, 243);;
+  box-shadow: 0 0 3px rgb(33, 33, 33);
+}
+.submitButton{
+  height: 30px;
+  width: 30px;
+  background-image: url("../img/Search_logo_searchbar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.advancedSearch{
+  border: solid 1px black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color:black;
+  font-size: 14px;
+}
+
+.advancedSearch:hover{
+  text-decoration: none;
+}
+
+
+.imgResizeSessions{
+  height: 160px;
+  width: 180px;
+  border-radius: 15px;
+}
+
+.gameShowIcon{
+  filter: invert(100%);
+  height: 30px;
+  width: auto;
+  margin-left: 20px;
+}
+
+.gameShowTitle{
+  font-family: dancingScriptBold;
+  font-size: 40px;
+}
+
+.gameShowDescription{
+  background-color: rgb(31, 46, 73);
+  border: double 2px rgb(255, 196, 0);
+  border-radius: 15px;
+  color:white;
+  padding: 10px;
+}
+
+.gameShowImage{
+  width:100%;
+  height: auto;
+}
+/* Main container du body */
