@@ -2,13 +2,13 @@
 .mainDarkBackground{
   position: relative;
   z-index:2;
-  background-color: rgb(31, 46, 73);
+  background-color: $darkColor;
   position: fixed;
   border-bottom: solid 2px white;
 }
 
 .mainTitle{
-  color: rgb(255, 231, 200);
+  color: $lightColor;
   font-size: 45px;
   font-family: "dancingScriptBold"
 }
@@ -39,7 +39,7 @@
   top:45px;
   right:0px;
   width: 200px;
-  background-color: rgb(31, 46, 73);
+  background-color: $darkColor;
   border: solid 2px black;
   display:none;
   font-family: "dancingScriptBold";
@@ -82,7 +82,7 @@
 }
 
 .navFont, .navFontSidebar{
-  color:rgb(252, 238, 222);
+  color:$lightColor;
   font-size:16px;
 }
 
@@ -122,7 +122,7 @@
   left:-16px;
   width:200px;
   height: 92vh;
-  background-color: rgb(51, 54, 59);
+  background-color: $darkColor;
 }
 
 .filter{
@@ -157,7 +157,7 @@
   right: 20px;
   width: 200px;
   height:300px;
-  background-color: rgb(51, 54, 59);
+  background-color: $darkColor;
   border: solid 2px black;
   font-family: "dancingScriptBold";
   font-size: 20px;

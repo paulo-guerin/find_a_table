@@ -1,3 +1,6 @@
+/*scss variables*/
+/*scss variables*/
+/*imports*/
 /* Navbar responsive et menu burger */
 .mainDarkBackground {
   position: relative;
@@ -7,7 +10,7 @@
   border-bottom: solid 2px white; }
 
 .mainTitle {
-  color: #ffe7c8;
+  color: #fffaf4;
   font-size: 45px;
   font-family: "dancingScriptBold"; }
 
@@ -68,7 +71,7 @@
   display: flex; }
 
 .navFont, .navFontSidebar {
-  color: #fceede;
+  color: #fffaf4;
   font-size: 16px; }
 
 .navFontSidebar {
@@ -100,7 +103,7 @@
   left: -16px;
   width: 200px;
   height: 92vh;
-  background-color: #33363b; }
+  background-color: #1f2e49; }
 
 .filter {
   margin: 0;
@@ -130,7 +133,7 @@
   right: 20px;
   width: 200px;
   height: 300px;
-  background-color: #33363b;
+  background-color: #1f2e49;
   border: solid 2px black;
   font-family: "dancingScriptBold";
   font-size: 20px;
@@ -147,7 +150,23 @@
   margin-top: 0px; }
 
 /* Navbar responsive */
-/* Main container du body */
+.testDiv {
+  background-color: #1f2e49;
+  height: 150px;
+  width: 40%;
+  margin-bottom: 20px; }
+  .testDiv a {
+    color: white; }
+
+.divExtend, .divExtend--modif {
+  background-color: #1f2e49;
+  height: 150px;
+  width: 40%;
+  margin-bottom: 20px; }
+  .divExtend--modif {
+    border-radius: 20px; }
+
+/* Main container du body pour les index game et session */
 main {
   background-color: #fffaf4;
   padding-top: 120px;
@@ -155,23 +174,23 @@ main {
 
 .mainContainer {
   background-color: #fffaf4;
-  border: double 3px #33363b;
+  border: double 3px #1f2e49;
   border-radius: 15px;
   padding-bottom: 30px; }
 
 .pageTitle {
   font-family: "dancingScriptBold";
   font-size: 45px;
-  color: #33363b; }
+  color: #1f2e49; }
 
 .doubleLine {
   width: 100%;
-  border-bottom: solid 3px #33363b; }
+  border-bottom: solid 3px #1f2e49; }
 
 .sticker {
   height: 185px;
   background-color: #1f2e49;
-  border: double 2px #ffc400;
+  border: double 2px #fffaf4;
   border-radius: 15px;
   transition: box-shadow .3s; }
 
@@ -241,28 +260,7 @@ main {
   width: 180px;
   border-radius: 15px; }
 
-.gameShowIcon {
-  filter: invert(100%);
-  height: 30px;
-  width: auto;
-  margin-left: 20px; }
-
-.gameShowTitle {
-  font-family: dancingScriptBold;
-  font-size: 40px; }
-
-.gameShowDescription {
-  background-color: #1f2e49;
-  border: double 2px #ffc400;
-  border-radius: 15px;
-  color: white;
-  padding: 10px; }
-
-.gameShowImage {
-  width: 100%;
-  height: auto; }
-
-/* Main container du body */
+/* Main container du body pour les index game et session*/
 /* Marges et padding */
 * {
   margin: 0;
@@ -414,5 +412,29 @@ main {
   main {
     padding-top: 55px; } }
 /* Media query navbar et main */
+/* Main container du body pour le show d'une session et d'un game*/
+.gameShowIcon {
+  filter: invert(100%);
+  height: 30px;
+  width: auto;
+  margin-left: 20px; }
+
+.gameShowTitle {
+  font-family: dancingScriptBold;
+  font-size: 40px; }
+
+.gameShowDescription {
+  background-color: #1f2e49;
+  border: double 2px #fffaf4;
+  border-radius: 15px;
+  color: white;
+  padding: 10px; }
+
+.gameShowImage {
+  width: 100%;
+  height: auto; }
+
+/* Main container du body pour le show d'une session et d'un game*/
+/*imports*/
 
 /*# sourceMappingURL=index.css.map */
