@@ -20,11 +20,41 @@ class GameRepository extends ServiceEntityRepository
     }
 
     public function searchGame($query){
-        if(count($query)==1 && isset($query["query"])) {
+
+        if(isset($query["category"])){
+            if($query["category"] == "all"){
+                unset($query["category"]);
+            };
+        };
+
+        if(count($query)==null){
+            return $results=[];
+        }
+        elseif(count($query)==1 && isset($query["query"])) {
             $qb = $this->createQueryBuilder('g');
             $selection = $qb->select('g')
                 ->Where('g.title LIKE :query')
                 ->setParameter('query', "%" . $query["query"] . "%")
+                ->getQuery();
+            $results = $selection->getResult();
+            return $results;
+        }
+        elseif(count($query)==2 && isset($query["query"]) && isset($query["category"]) ) {
+            $qb = $this->createQueryBuilder('g');
+            $selection = $qb->select('g')
+                ->Where('g.title LIKE :query')
+                ->andWhere('g.categoryID = :category')
+                ->setParameter('query', "%" . $query["query"] . "%")
+                ->setParameter('category',  $query["category"] )
+                ->getQuery();
+            $results = $selection->getResult();
+            return $results;
+        }
+        elseif(count($query)==1 && isset($query["category"]) ) {
+            $qb = $this->createQueryBuilder('g');
+            $selection = $qb->select('g')
+                ->Where('g.categoryID = :category')
+                ->setParameter('category',  $query["category"] )
                 ->getQuery();
             $results = $selection->getResult();
             return $results;

@@ -1,4 +1,4 @@
-{% extends "head_header_footer/header_template.html.twig" %}
+{% extends "head_header_footer/head_header_footer_template.html.twig" %}
 
 {% block main %}
     <div class="container mainContainer">
@@ -10,7 +10,7 @@
                         <input type="text" class="searchBar" name="query" placeholder="Recherche">
                         <input type="submit" class="submitButton p-1" value="">
                     </form>
-                    <a href="#" class="advancedSearch p-1">
+                    <a href="{{ path("advanced_game_search") }}" class="advancedSearch p-1">
                         <div>
                             <span>Recherche avancée</span>
                         </div>

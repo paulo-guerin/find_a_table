@@ -1,16 +1,98 @@
-{% extends path("head_header_footer/header_template.html.twig") %}
+{% extends "head_header_footer/head_header_footer_template.html.twig" %}
 
 {% block main %}
     <form action="{{ path("advanced_game_search") }}" method="get">
-        <input type="text" name="search_query">
+        <input type="text" name="query">
         <br>
-        <span>Rechercher dans :</span>
-        <p class="fontRed">Livres</p>
-        <input type="checkbox" name="book[]" value="name"><label class="fontOptions">Recherche</label>
-        <input type="checkbox" name="book[]" value="resume"><label class="fontOptions">Resume</label>
-        <p class="fontRed">Autheurs</p>
-        <input type="checkbox" name="author[]" value="nom"><label class="fontOptions">Nom</label>
-        <input type="checkbox" name="author[]" value="bio"><label class="fontOptions">Biographie</label>
-        <input type="submit" value="rechercher">
+        <select name="category">
+            <option value="all">Toutes</option>
+            {% for category in categories %}
+                <option value={{ category.id }}>{{ category.name }}</option>
+            {% endfor %}
+        </select>
     </form>
+
+    <div class="container mainContainer">
+        {# Titre de la page de jeu et barre de recherche#}
+        <div class="d-flex justify-content-between align-items-center pt-4 responsiveDisplay">
+            <h2 class="pageTitle pl-3">Résultats de la recherche</h2>
+        </div>
+        {# Double ligne sous le titre #}
+        <div class="doubleLine ml-2"></div>
+        <div class="doubleLine pt-1"></div>
+        {# Double ligne sous le titre #}
+        {# Titre de la page de jeu et barre de recherche#}
+        {# Display des vignettes de jeu #}
+        <div class="row d-flex justify-content-around">
+            {# Boucle permettant le display des jeux en vignettes #}
+            {% for game in games %}
+                <div class="col-lg-6 pt-4">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-11 sticker">
+                            <a href="{{ path("game_game", {"id":game.id}) }}" class="stickerLink">
+                                <div class="row stickerRow">
+                                    {# Image du jeu #}
+                                    <div class="col-3 col-md-1 col-lg-3 stickerImg d-flex align-items-center">
+                                        <img src="{{ game.image }}" alt="Image du jeu de société" class="imgResize">
+                                    </div>
+                                    {# Image du jeu #}
+                                    {# Description du jeu #}
+                                    <div class="col-9 col-md-11 col-lg-9">
+                                        <div class="row pt-1">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-12 text-center">
+                                                        <h4 class="gameTitle overflow-hidden givenHeight">{{ game.title }}</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="row d-flex justify-content-between pt-1 gameDescription">
+                                                    <div class="col-6 text-center">
+                                                        <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="pictoGame">
+                                                        <span class="gamePictoDescription gamePictoDescriptionHide">Catégorie : </span>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                        <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
+                                                        <span class="gamePictoDescription gamePictoDescriptionHide">Temps de jeu : </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row d-flex justify-content-between gameDescription">
+                                                    <div class="col-6 text-center">
+                                                        <span class="gamePictoDescription">{{ game.category.name }}</span>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                        <span class="gamePictoDescription">{{ game.time }}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row d-flex justify-content-between pt-3 gameDescription">
+                                                    <div class="col-6 text-center">
+                                                        <img src="{{ asset("assets/img/maxPlayersIcon.png") }}" alt="Icone de joueurs, nombre de joueurs" class="pictoGame">
+                                                        <span class="gamePictoDescription gamePictoDescriptionHide">Joueurs : </span>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                        <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
+                                                        <span class="gamePictoDescription gamePictoDescriptionHide">Note moyenne : </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row d-flex justify-content-between gameDescription">
+                                                    <div class="col-6 text-center">
+                                                        <span class="gamePictoDescription">De {{ game.minplayer }} à {{ game.maxplayer }} </span>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                        <span class="gamePictoDescription">8.5/10</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {# Description du jeu #}
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {# Boucle permettant le display des jeux en vignettes #}
+        </div>
+        {# Display des vignettes de jeu #}
+    </div>
 {% endblock %}
