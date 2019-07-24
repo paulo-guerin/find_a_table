@@ -1,0 +1,25 @@
+{% extends "head_header_footer/header_template.html.twig" %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h3 class="ml-5 mb-2 gameShowTitle">{{ game.title }}</h3>
+        <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="gameShowIcon ml-5">
+        <span>Catégorie : {{ game.category.name }}</span>
+        <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
+        <span>Temps de jeu : {{ game.time }}</span>
+        <img src="{{ asset("assets/img/maxPlayersIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
+        <span>Nombre de joueurs : de {{ game.minplayer }} à {{ game.maxplayer }}</span>
+        <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone de note" class="gameShowIcon">
+        <span>Note des utilisateurs : </span>
+        <div class="row d-flex justify-content-center mt-4">
+            <div class="col-7 ">
+                <div class="gameShowDescription">
+                    <p>{{ game.description }}</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="{{ game.image }}" alt="Image du jeu de société" class="gameShowImage">
+            </div>
+        </div>
+    </div>
+{% endblock %}

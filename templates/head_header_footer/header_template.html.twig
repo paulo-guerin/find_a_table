@@ -59,8 +59,8 @@
                                 </a>
                             </li>
                             <li class="navButtonsSidebar d-flex border-bottom border-light">
-                                <a href="#" class="d-flex">
-                                    <img src="{{ asset("assets/img/book_sidebar_white.png") }}" alt="Logo de cartes dans le bouton des sessions de la barre de navigation" class="imgNavSidebar">
+                                <a href="{{ path("games_index") }}" class="d-flex">
+                                    <img src="{{ asset("assets/img/book_sidebar_white.png") }}" alt="Logo d'annuaire dans le bouton d'annuaire des jeux de la barre de navigation" class="imgNavSidebar">
                                     <span class="navFontSidebar pt-1 pl-1">Annuaire des jeux</span>
                                 </a>
                             </li>
@@ -106,13 +106,21 @@
             <div class="col-1">
                 <div class="row justify-content-end align-items-center">
                     <div class="col-12 col-lg-10 mr-4 position-relative dropdownHover">
-                        <img src="{{ asset("assets/img/avatar.png") }}" alt="Image de l'avatar de l'utilisateur" class="avatarImg">
-                        <ul class="dropdownMenu list-unstyled">
-                            <li><a href="#">Profil</a></li>
-                            <li><a href="#">Editer profil</a></li>
-                            <li><a href="#">Annuaire des membres</a></li>
-                            <li><a href="#">Déconnection</a></li>
-                        </ul>
+                        <div class="d-flex">
+                            {% if app.user %}
+                                <img src="{{ asset("assets/img/avatar.png") }}" alt="Image de l'avatar de l'utilisateur" class="avatarImg">
+                                <ul class="dropdownMenu list-unstyled">
+                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="#">Editer profil</a></li>
+                                    <li><a href="#">Annuaire des membres</a></li>
+                                    <li><a href="{{ path("fos_user_security_logout") }}">Déconnection</a></li>
+                                </ul>
+                            {% else %}
+                                <a href="{{ path("fos_user_registration_register") }}" class="connectionButton p-1">
+                                    <span>Connection</span>
+                                </a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -149,8 +157,8 @@
                         </a>
                     </li>
                     <li class="navButtons d-flex align-items-center px-1 ml-2">
-                        <a href="#" class="d-flex justify-content-around">
-                            <img src="{{ asset("assets/img/book_sidebar_white.png") }}" alt="Logo de cartes dans le bouton des sessions de la barre de navigation" class="imgNav ml-2 mt-1">
+                        <a href="{{ path("games_index") }}" class="d-flex justify-content-around">
+                            <img src="{{ asset("assets/img/book_sidebar_white.png") }}" alt="Logo d'annuaire dans le bouton d'annuaire des jeux de la barre de navigation" class="imgNav ml-2 mt-1">
                             <span class="navFont ml-1 mr-2 mb-1 text-align-center">Annuaire des jeux</span>
                         </a>
                     </li>
@@ -174,6 +182,7 @@
         </nav>
         <!-- Navbar responsive qui disparait en dessous de 576px -->
     </div>
+
 </header>
 
 <main>

@@ -1,0 +1,16 @@
+{% extends path("head_header_footer/header_template.html.twig") %}
+
+{% block main %}
+    <form action="{{ path("advanced_game_search") }}" method="get">
+        <input type="text" name="search_query">
+        <br>
+        <span>Rechercher dans :</span>
+        <p class="fontRed">Livres</p>
+        <input type="checkbox" name="book[]" value="name"><label class="fontOptions">Recherche</label>
+        <input type="checkbox" name="book[]" value="resume"><label class="fontOptions">Resume</label>
+        <p class="fontRed">Autheurs</p>
+        <input type="checkbox" name="author[]" value="nom"><label class="fontOptions">Nom</label>
+        <input type="checkbox" name="author[]" value="bio"><label class="fontOptions">Biographie</label>
+        <input type="submit" value="rechercher">
+    </form>
+{% endblock %}
