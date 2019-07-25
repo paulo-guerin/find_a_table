@@ -1,16 +1,27 @@
 {% extends "head_header_footer/head_header_footer_template.html.twig" %}
 
 {% block main %}
+
+    {#Formulaire de recherche avancée des jeux#}
     <form action="{{ path("advanced_game_search") }}" method="get">
+        <span>Nom du jeu</span>
         <input type="text" name="query">
-        <br>
+        <span>Catégorie</span>
         <select name="category">
             <option value="all">Toutes</option>
             {% for category in categories %}
                 <option value={{ category.id }}>{{ category.name }}</option>
             {% endfor %}
         </select>
+        <span>Nombre de joueurs maximum</span>
+        <select name="players">
+            <option value="empty">-</option>
+            {% for i in 0..maxplayer[0]["max_player"] %}
+                <option value={{ i }}>{{ i }}</option>
+            {% endfor %}
+        </select>
     </form>
+    {#Formulaire de recherche avancée des jeux#}
 
     <div class="container mainContainer">
         {# Titre de la page de jeu et barre de recherche#}

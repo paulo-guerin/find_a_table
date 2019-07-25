@@ -55,11 +55,13 @@
          */
         public function advancedGameSearch(GameRepository $gameRepository, CategoryRepository $categoryRepository, Request $request){
             $query=$request->query->all();
+            $maxplayer= $gameRepository->maxPlayer();
             $results = $gameRepository->searchGame($query);
             $categories = $categoryRepository->findAll();
             return $this->render('game/advanced_game_search.html.twig', [
                 'games' => $results,
                 'categories' => $categories,
+                'maxplayer' => $maxplayer,
             ]);
         }
     }
