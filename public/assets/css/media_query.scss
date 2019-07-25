@@ -1,0 +1,153 @@
+/* Media query navbar et main */
+@media (max-width:1200px){
+  .gameTitle{
+    font-family: "dancingScriptRegular";
+    color: rgb(252, 238, 222);
+    font-size: 18px;
+  }
+  .pictoGame{
+    height: 24px;
+  }
+  .gamePictoDescription{
+    color: rgb(252, 238, 222);
+    font-size: 12px;
+  }
+  .sticker h4{
+    font-size: 24px;
+  }
+}
+@media (max-width:992px){
+  .navFont{
+    font-size:12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .imgNav, .imgPicto{
+    display:none;
+  }
+  .avatarImg{
+    height:40px;
+    width:auto;
+  }
+  .smallNav{
+    display:flex;
+  }
+  .dropdownMenu{
+    top:30px;
+  }
+
+  .notificationDiv2{
+    display: none;
+  }
+
+  main{
+    padding-top: 90px;
+  }
+  .pageTitle{
+    font-size: 35px;
+  }
+  .pictoGame{
+    height: 28px;
+  }
+  .gamePictoDescription{
+    font-size: 15px;
+  }
+
+  .searchBar{
+    width: 120px;
+  }
+  .advancedSearch{
+    font-size: 12px;
+  }
+  .imgResize{
+    width:120px;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+@media(max-width:775px){
+  .pageTitle{
+    font-size: 25px;
+  }
+  .searchBar, .submitButton{
+    display: none;
+  }
+  .advancedSearch{
+    background-color: rgb(33, 33, 33);
+    color: white;
+  }
+  .navFont{
+    font-size: 10px;
+  }
+  .imgResize{
+    width:100px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+}
+@media (max-width:576px){
+  .navbarBottomMode{
+    display:none;
+  }
+  .avatarImg{
+    height:35px;
+    width:auto;
+  }
+  .burgerMenu{
+    display:block;
+  }
+  main{
+    padding-top: 70px;
+  }
+  .pageTitle{
+    font-size: 25px;
+  }
+  .gamePictoDescription{
+    font-size: 12px;
+  }
+  .pictoGame{
+    height: 22px;
+  }
+  .imgResize{
+    width:100px;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width:440px){
+
+  .gamePictoDescriptionHide{
+    display: none;
+  }
+  .responsiveDisplay{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .imgResize{
+    padding-top:20px;
+    width:100px;
+    height: auto;
+    border-radius: 10px;
+  }
+  .gameDescription{
+    padding-left: 50px;;
+  }
+  .gameTitle{
+    width:250px;
+    margin-left:-70px;
+  }
+}
+
+@media (max-width:290px){
+  .logoSmartphone{
+    height:24px;
+    width: auto;
+  }
+  main{
+    padding-top: 55px;
+  }
+}
+/* Media query navbar et main */

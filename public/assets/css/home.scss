@@ -1,0 +1,22 @@
+.testDiv {
+  background-color: $darkColor;
+  height: 150px;
+  width: 40%;
+  margin-bottom:20px;
+
+  a{
+    color: white;
+  }
+}
+
+.divExtend{
+  background-color: $darkColor;
+  height: 150px;
+  width: 40%;
+  margin-bottom:20px;
+
+  &--modif {
+    @extend .divExtend;
+    border-radius:20px;
+  }
+}
