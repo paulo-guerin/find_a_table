@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f5c9853-b176-4e48-8bdc-1933fb43118a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game/advanced_game_search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/advanced_game_search.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game/game.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/game.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game/game_search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/game_search.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game/games_index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/games_index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +51,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/game/games_index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
+            <state relative-caret-position="75">
+              <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="115" column="108" selection-start-line="115" selection-start-column="108" selection-end-line="115" selection-end-column="108" />
             </state>
           </provider>
         </entry>
@@ -70,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-561" />
@@ -109,6 +112,7 @@
       <find>connect</find>
       <find>connection</find>
       <find>exte</find>
+      <find>if</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,13 +165,13 @@
         <option value="$PROJECT_DIR$/templates/game/game.html.twig" />
         <option value="$PROJECT_DIR$/templates/game/advanced_game_search.html.twig" />
         <option value="$PROJECT_DIR$/public/assets/css/head_header_footer.scss" />
-        <option value="$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig" />
         <option value="$PROJECT_DIR$/public/assets/css/main.scss" />
         <option value="$PROJECT_DIR$/public/assets/css/main_index.scss" />
         <option value="$PROJECT_DIR$/public/assets/css/main_show.scss" />
         <option value="$PROJECT_DIR$/public/assets/css/index.scss" />
         <option value="$PROJECT_DIR$/templates/home/home.html.twig" />
         <option value="$PROJECT_DIR$/public/assets/css/home.scss" />
+        <option value="$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig" />
       </list>
     </option>
   </component>
@@ -425,12 +429,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83405000" />
+    <option name="totallyTimeSpent" value="83924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15637584" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15637584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -443,7 +448,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2719547" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2719547" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -455,29 +460,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19754">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#25768#26002#2" expanded="true" />
-            <element signature="e#26806#26959#1" expanded="true" />
-            <element signature="e#26999#27233#1" expanded="true" />
-            <element signature="e#30239#30515#2" expanded="true" />
-            <element signature="e#31347#31500#1" expanded="true" />
-            <element signature="e#31540#31816#1" expanded="true" />
-            <element signature="e#61072#61259#2" expanded="true" />
-            <element signature="e#61488#61624#2" expanded="true" />
-            <element signature="e#62027#62160#2" expanded="true" />
-            <element signature="e#63642#63795#1" expanded="true" />
-            <element signature="e#75788#76018#2" expanded="true" />
-            <element signature="e#76885#77121#2" expanded="true" />
-            <element signature="e#106714#106891#2" expanded="true" />
-            <element signature="e#106937#107114#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sessions_index" />
     <entry file="file://$PROJECT_DIR$/templates/sessions/index.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190715121437.php" />
@@ -700,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/game/games_index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/game/game.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -738,13 +713,6 @@
     <entry file="file://$PROJECT_DIR$/templates/game/game_search.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/index.scss">
@@ -782,6 +750,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/game/games_index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="115" column="108" selection-start-line="115" selection-start-column="108" selection-end-line="115" selection-end-column="108" />
         </state>
       </provider>
     </entry>

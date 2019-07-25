@@ -107,10 +107,13 @@
                             {% if app.user %}
                                 <img src="{{ asset("assets/img/avatar.png") }}" alt="Image de l'avatar de l'utilisateur" class="avatarImg">
                                 <ul class="dropdownMenu list-unstyled">
-                                    <li><a href="#">Profil</a></li>
-                                    <li><a href="#">Editer profil</a></li>
-                                    <li><a href="#">Annuaire des membres</a></li>
-                                    <li><a href="{{ path("fos_user_security_logout") }}">Déconnection</a></li>
+                                    <li><a href="#" class = "text-info">Profil</a></li>
+                                    <li><a href="#" class = "text-info">Editer profil</a></li>
+                                    <li><a href="#" class = "text-info">Annuaire des membres</a></li>
+                                    {% if is_granted('ROLE_ADMIN') %}
+                                        <li ><a href="#" class = "text-danger">Gestion administrateur</a></li>
+                                    {% endif %}
+                                    <li><a href="{{ path("fos_user_security_logout") }}" class = "text-info">Déconnection</a></li>
                                 </ul>
                             {% else %}
                                 <a href="{{ path("fos_user_security_login") }}" class="connectionButton p-1">
