@@ -49,7 +49,7 @@ class Game
     /**
      * @ORM\Column(type="integer")
      */
-    private $status;
+    private $status = 1;
 
     /**
      * @ORM\Column(type="integer")

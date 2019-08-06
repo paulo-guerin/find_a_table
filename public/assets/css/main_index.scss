@@ -32,6 +32,14 @@ main{
   transition: box-shadow .3s;
 }
 
+.stickerRed{
+  height:185px;
+  background-color: darkred;
+  border: double 2px $lightColor;
+  border-radius: 15px;
+  transition: box-shadow .3s;
+}
+
 .sticker:hover{
   box-shadow: 0 0 20px rgb(33, 33, 33);
 }

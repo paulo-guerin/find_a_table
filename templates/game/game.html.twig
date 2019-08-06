@@ -1,25 +1,68 @@
 {% extends "head_header_footer/head_header_footer_template.html.twig" %}
 
 {% block main %}
-    <div class="container-fluid">
-        <h3 class="ml-5 mb-2 gameShowTitle">{{ game.title }}</h3>
-        <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="gameShowIcon ml-5">
-        <span>Catégorie : {{ game.category.name }}</span>
-        <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
-        <span>Temps de jeu : {{ game.time }}</span>
-        <img src="{{ asset("assets/img/maxPlayersIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
-        <span>Nombre de joueurs : de {{ game.minplayer }} à {{ game.maxplayer }}</span>
-        <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone de note" class="gameShowIcon">
-        <span>Note des utilisateurs : </span>
-        <div class="row d-flex justify-content-center mt-4">
-            <div class="col-7 ">
-                <div class="gameShowDescription">
-                    <p>{{ game.description }}</p>
+    {% for msg in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
+    {% if app.user %}
+            {% if is_granted('ROLE_ADMIN') %}
+                <li ><a href="{{ path("admin_update_game", {"id":game.id}) }}" >Mofifier les informations du jeu</a></li>
+                {% if game.status == 1%}
+                    <li ><a href="{{ path("admin_hide_game", {"id":game.id}) }}" class = "text-danger">Supprimer le jeu</a></li>
+                {% elseif game.status == 0 %}
+                    <li ><a href="{{ path("admin_show_game", {"id":game.id}) }}" class = "text-danger">Rendre le jeu visible aux utilisateurs</a></li>
+                {% endif %}
+            {% endif %}
+    {% endif %}
+    {% if game.status == 1 %}
+        <div class="container-fluid">
+            <h3 class="ml-5 mb-2 gameShowTitle">{{ game.title }}</h3>
+            <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="gameShowIcon ml-5">
+            <span>Catégorie : {{ game.category.name }}</span>
+            <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
+            <span>Temps de jeu : {{ game.time }}</span>
+            <img src="{{ asset("assets/img/maxPlayersIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
+            <span>Nombre de joueurs : de {{ game.minplayer }} à {{ game.maxplayer }}</span>
+            <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone de note" class="gameShowIcon">
+            <span>Note des utilisateurs : </span>
+            <div class="row d-flex justify-content-center mt-4">
+                <div class="col-7 ">
+                    <div class="gameShowDescription">
+                        <p>{{ game.description }}</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="{{ game.image }}" alt="Image du jeu de société" class="gameShowImage">
                 </div>
             </div>
-            <div class="col-4">
-                <img src="{{ game.image }}" alt="Image du jeu de société" class="gameShowImage">
-            </div>
         </div>
-    </div>
+    {% elseif app.user %}
+        {% if is_granted('ROLE_ADMIN') %}
+            <div class="container-fluid">
+                <h3 class="ml-5 mb-2 gameShowTitle">{{ game.title }}</h3>
+                <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="gameShowIcon ml-5">
+                <span>Catégorie : {{ game.category.name }}</span>
+                <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
+                <span>Temps de jeu : {{ game.time }}</span>
+                <img src="{{ asset("assets/img/maxPlayersIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
+                <span>Nombre de joueurs : de {{ game.minplayer }} à {{ game.maxplayer }}</span>
+                <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone de note" class="gameShowIcon">
+                <span>Note des utilisateurs : </span>
+                <div class="row d-flex justify-content-center mt-4">
+                    <div class="col-7 ">
+                        <div class="gameShowDescription">
+                            <p>{{ game.description }}</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="{{ game.image }}" alt="Image du jeu de société" class="gameShowImage">
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% else %}
+        <p>Ce jeu n'est pas visible par les utilisateurs, nos excuses</p>
+    {% endif %}
 {% endblock %}

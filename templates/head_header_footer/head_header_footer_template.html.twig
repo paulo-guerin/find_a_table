@@ -111,7 +111,7 @@
                                     <li><a href="#" class = "text-info">Editer profil</a></li>
                                     <li><a href="#" class = "text-info">Annuaire des membres</a></li>
                                     {% if is_granted('ROLE_ADMIN') %}
-                                        <li ><a href="#" class = "text-danger">Gestion administrateur</a></li>
+                                        <li ><a href="{{ path("admin_index") }}" class = "text-danger">Gestion administrateur</a></li>
                                     {% endif %}
                                     <li><a href="{{ path("fos_user_security_logout") }}" class = "text-info">Déconnection</a></li>
                                 </ul>
