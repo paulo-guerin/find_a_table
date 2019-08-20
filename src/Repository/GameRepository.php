@@ -28,7 +28,7 @@ class GameRepository extends ServiceEntityRepository
         };
 
         if(count($query)==null){
-            return $results=[];
+            return $results=1;
         }
         elseif(count($query)==1 && isset($query["query"])) {
             $qb = $this->createQueryBuilder('g');
