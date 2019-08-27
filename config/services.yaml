@@ -30,3 +30,8 @@ services:
         class: AppBundle\Form\RegistrationFormType
         tags:
             - {name: form.type}
+
+    app.form.profile:
+        class: AppBundle\Form\ProfileFormType
+        tags:
+            - { name: form.type }

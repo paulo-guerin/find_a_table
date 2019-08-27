@@ -100,7 +100,7 @@
             <!-- Pictogrames de notification et de messagerie, n'apparaissent qu'à partir de 576px (media Query) -->
 
             <!-- Avatar de l'utilisateur et menu dropdown utilisateur -->
-            <div class="col-1">
+            <div class="col-2">
                 <div class="row justify-content-end align-items-center">
                     <div class="col-12 col-lg-10 mr-4 position-relative dropdownHover">
                         <div class="d-flex">
@@ -116,12 +116,14 @@
                                     <li><a href="{{ path("fos_user_security_logout") }}" class = "text-info">Déconnection</a></li>
                                 </ul>
                             {% else %}
-                                <a href="{{ path("fos_user_security_login") }}" class="connectionButton p-1">
-                                    <span>Connection</span>
-                                </a>
-                                <a href="{{ path("fos_user_registration_register") }}" class="connectionButton p-1">
-                                    <span>Inscription</span>
-                                </a>
+                                <div class="d-flex connectionBox">
+                                    <a href="{{ path("fos_user_security_login") }}" class="connectionButton p-1">
+                                        <span>Connection</span>
+                                    </a>
+                                    <a href="{{ path("fos_user_registration_register") }}" class="connectionButton p-1">
+                                        <span>Inscription</span>
+                                    </a>
+                                </div>
                             {% endif %}
                         </div>
                     </div>
@@ -172,14 +174,14 @@
                         </a>
                     </li>
                 </ul>
-                <ul class="navbarSecondHalf d-flex px-1 mr-4 list-unstyled py-0 my-0 position-relative">
+                <ul class="navbarSecondHalf d-flex px-1 list-unstyled py-0 my-0 position-relative">
                     <li><a href="#"><img src="{{ asset("assets/img/bell.png") }}" alt="Logo de cloche de notification" class="imgPicto pr-2 dropdownNotifications2"></a></li>
                     <!-- Dropdown de notifications -->
                     <div class="notificationDiv2">
 
                     </div>
                     <!-- Dropdown de notifications -->
-                    <li><a href="#" class="linkMessage"><img src="{{ asset("assets/img/email_icon.png") }}" alt="Logo de mail" class="imgPicto pr-3"></a></li>
+                    <li><a href="#" class="linkMessage"><img src="{{ asset("assets/img/email_icon.png") }}" alt="Logo de mail" class="imgPicto"></a></li>
                 </ul>
             </div>
         </nav>

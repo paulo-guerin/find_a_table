@@ -62,6 +62,7 @@
                 'games' => $results,
                 'categories' => $categories,
                 'maxplayer' => $maxplayer,
+                'query' => $query
             ]);
         }
     }

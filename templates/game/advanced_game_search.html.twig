@@ -13,7 +13,7 @@
                 <option value={{ category.id }}>{{ category.name }}</option>
             {% endfor %}
         </select>
-        <span>Nombre de joueurs maximum</span>
+        <span>Joueurs max</span>
         <select name="players">
             <option value="empty">-</option>
             {% for i in 0..maxplayer[0]["max_player"] %}
@@ -24,9 +24,6 @@
     </form>
     {#Formulaire de recherche avancée des jeux#}
     <br>
-    {% if games %}
-        {{ dump(games) }}
-    {% endif %}
     <div class="container mainContainer">
         {# Titre de la page de jeu et barre de recherche#}
         <div class="d-flex justify-content-between align-items-center pt-4 responsiveDisplay">

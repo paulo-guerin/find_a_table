@@ -149,6 +149,14 @@
 .aNoMarginPadding {
   margin-top: 0px; }
 
+.navbarSecondHalf {
+  margin-right: 150px; }
+
+/*.connectionBox{
+  position:absolute;
+  margin-right: 200px;
+  border:black solid 3px;
+}*/
 /* Navbar responsive */
 .testDiv {
   background-color: #1f2e49;

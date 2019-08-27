@@ -112,7 +112,7 @@ class User extends BaseUser
     /**
      * @ORM\Column(type="string", length=500, nullable=true)
      */
-    private $profilepicture;
+    private $profilepicture = "avatar.png";
 
     /**
      * @return mixed

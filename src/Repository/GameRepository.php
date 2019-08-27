@@ -28,7 +28,7 @@ class GameRepository extends ServiceEntityRepository
         };
 
         if(count($query)==null){
-            return $results=1;
+            return $results=[];
         }
         elseif(count($query)==1 && isset($query["query"])) {
             $qb = $this->createQueryBuilder('g');
@@ -40,7 +40,7 @@ class GameRepository extends ServiceEntityRepository
             return $results;
         }
         elseif(count($query)==2 && isset($query["query"])) {
-            if($query["players"] == "all"){
+            if($query["players"] == "empty"){
                 $qb = $this->createQueryBuilder('g');
                 $selection = $qb->select('g')
                     ->Where('g.title LIKE :query')
@@ -62,7 +62,7 @@ class GameRepository extends ServiceEntityRepository
 
         }
         elseif(count($query)==3 && isset($query["query"]) && isset($query["category"]) ) {
-            if($query["players"] == "all") {
+            if($query["players"] == "empty") {
                 $qb = $this->createQueryBuilder('g');
                 $selection = $qb->select('g')
                     ->Where('g.title LIKE :query')
@@ -87,7 +87,7 @@ class GameRepository extends ServiceEntityRepository
             }
         }
         elseif(count($query)==2 && isset($query["category"]) ) {
-            if($query["players"] == "all"){
+            if($query["players"] == "empty"){
                 $qb = $this->createQueryBuilder('g');
                 $selection = $qb->select('g')
                     ->Where('g.categoryID = :category')
