@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f5c9853-b176-4e48-8bdc-1933fb43118a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Form/ProfileFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ProfileImageFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/find_a_table.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/find_a_table.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/fos_user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/fos_user.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/90d4839793b32a1f8be6103052a1a26b7518b3a2/head_header_footer.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/90d4839793b32a1f8be6103052a1a26b7518b3a2/head_header_footer.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/head_header_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/head_header_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/GameRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/GameRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game/advanced_game_search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/advanced_game_search.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProfileImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfileImageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProfileImageFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProfileImageFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile_image/uploadImageForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile_image/uploadImageForm.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Form/ProfileImageFormType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+            <state relative-caret-position="301">
+              <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
               <folding>
                 <element signature="e#28#48#0#PHP" expanded="true" />
               </folding>
@@ -53,18 +36,14 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/profile_image/uploadImageForm.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/ProfileImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="15" column="96" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
+            <state relative-caret-position="321">
+              <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
               <folding>
                 <element signature="e#34#68#0#PHP" expanded="true" />
               </folding>
@@ -75,8 +54,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="47" column="92" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="92" />
+            <state relative-caret-position="255">
+              <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/services.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -91,57 +79,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/GameController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#41#61#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="114" column="41" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
+            <state relative-caret-position="471">
+              <caret line="127" column="37" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="37" />
               <folding>
                 <element signature="e#53#95#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Game.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-408">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/GameType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding>
-                <element signature="e#28#52#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/AdvancedGameSearchType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-              <folding>
-                <element signature="e#28#48#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,7 +150,6 @@
         <option value="$PROJECT_DIR$/public/assets/css/head_header_footer.scss" />
         <option value="$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig" />
         <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show_content.html.twig" />
-        <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/config/packages/fos_user.yaml" />
         <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Registration/register_content.html.twig" />
         <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig" />
@@ -219,10 +161,11 @@
         <option value="$PROJECT_DIR$/config/packages/vich_uploader.yaml" />
         <option value="$PROJECT_DIR$/templates/Update/updateForm.twig" />
         <option value="$PROJECT_DIR$/src/Form/ProfileFormType.php" />
+        <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/src/Form/ProfileImageFormType.php" />
         <option value="$PROJECT_DIR$/templates/profile_image/uploadImageForm.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/ProfileImageController.php" />
-        <option value="$PROJECT_DIR$/src/Form/ProfileImageFormType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/User.php" />
       </list>
     </option>
   </component>
@@ -362,42 +305,20 @@
             <path>
               <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
               <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
               <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
               <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="find_a_table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="find_a_table" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="profile_image" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -479,12 +400,12 @@
       <workItem from="1566201436611" duration="18575000" />
       <workItem from="1566405527286" duration="15454000" />
       <workItem from="1566823498161" duration="12965000" />
-      <workItem from="1566890910408" duration="9485000" />
+      <workItem from="1566890910408" duration="13868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174124000" />
+    <option name="totallyTimeSpent" value="178507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -503,7 +424,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49798658" visible="true" weight="0.27053824" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49798658" weight="0.27053824" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50201344" side_tool="true" weight="0.27053824" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -511,7 +432,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1704698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17449665" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -524,8 +445,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2719547" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49798658" visible="true" weight="0.27053824" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50201344" side_tool="true" weight="0.27053824" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -735,13 +656,6 @@
     <entry file="file://$PROJECT_DIR$/templates/game/game.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/UpdateController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -820,44 +734,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ProfileImageFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding>
-            <element signature="e#28#48#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Game.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="47" column="92" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile_image/uploadImageForm.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProfileImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" column="96" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
-          <folding>
-            <element signature="e#34#68#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -871,12 +751,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="114" column="41" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
+        <state relative-caret-position="471">
+          <caret line="127" column="37" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="37" />
           <folding>
             <element signature="e#53#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ProfileImageFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <element signature="e#28#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profile_image/uploadImageForm.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProfileImageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding>
+            <element signature="e#34#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -14,7 +14,7 @@ class ProfileImageFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('Image', FileType::class, [
+            ->add('image', FileType::class, [
                 'label' => 'Choisissez votre image',
 
                 // unmapped means that this field is not associated to any entity property
