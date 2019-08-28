@@ -105,10 +105,9 @@
                     <div class="col-12 col-lg-10 mr-4 position-relative dropdownHover">
                         <div class="d-flex">
                             {% if app.user %}
-                                <img src="{{ asset("assets/img/avatar.png") }}" alt="Image de l'avatar de l'utilisateur" class="avatarImg">
+                                <img src="{{ asset("assets/uploads/"~app.user.profilepicture) }}" alt="Image de l'avatar de l'utilisateur" class="avatarImg">
                                 <ul class="dropdownMenu list-unstyled">
-                                    <li><a href="#" class = "text-info">Profil</a></li>
-                                    <li><a href="#" class = "text-info">Editer profil</a></li>
+                                    <li><a href="{{ path("fos_user_profile_show") }}" class = "text-info">Profil</a></li>
                                     <li><a href="#" class = "text-info">Annuaire des membres</a></li>
                                     {% if is_granted('ROLE_ADMIN') %}
                                         <li ><a href="{{ path("admin_index") }}" class = "text-danger">Gestion administrateur</a></li>

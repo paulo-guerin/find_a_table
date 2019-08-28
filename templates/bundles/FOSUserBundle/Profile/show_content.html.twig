@@ -2,8 +2,9 @@
 
 <div class="gameShowDescription">
     <div>
-        <p>{{ user.profilepicture }}</p>
+        <img src="{{ asset("assets/uploads/"~user.profilepicture) }}" alt="Photo de profil de l'utilisateur" class="profilePictureShow">
     </div>
+    <br>
     <div>
         <p>Pseudo: {{ user.username }}</p>
         <p>Email: {{ user.email }}</p>
@@ -25,4 +26,6 @@
     <a href="{{ path("fos_user_profile_edit") }}">Editer profil</a>
     <br>
     <a href="{{ path("fos_user_change_password") }}">Changer le mot de passe</a>
+    <br>
+    <a href="{{ path("profile_image", {"id":user.id}) }}">Modifier l'image de profil</a>
 </div>
