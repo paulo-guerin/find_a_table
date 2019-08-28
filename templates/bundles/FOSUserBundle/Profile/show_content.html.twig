@@ -1,0 +1,31 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="gameShowDescription">
+    <div>
+        <img src="{{ asset("assets/uploads/"~user.profilepicture) }}" alt="Photo de profil de l'utilisateur" class="profilePictureShow">
+    </div>
+    <br>
+    <div>
+        <p>Pseudo: {{ user.username }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Prénom: {{ user.firstname }}</p>
+        <p>Nom: {{ user.lastname }}</p>
+        <span>Genre:</span>
+        {% if user.gender == 1 %}
+            <span>Féminin</span>
+        {% elseif user.gender == 2 %}
+            <span>Masculin</span>
+        {% elseif user.gender == 3 %}
+            <span>Autre</span>
+        {% endif %}
+        <br>
+        <br>
+        <p>Date de naissance: {{ user.birthdate|date('d-m-Y') }}</p>
+    </div>
+
+    <a href="{{ path("fos_user_profile_edit") }}">Editer profil</a>
+    <br>
+    <a href="{{ path("fos_user_change_password") }}">Changer le mot de passe</a>
+    <br>
+    <a href="{{ path("profile_image", {"id":user.id}) }}">Modifier l'image de profil</a>
+</div>

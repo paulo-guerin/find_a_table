@@ -45,19 +45,24 @@
             $query=$request->query->all();
             $results = $gameRepository->searchGame($query);
 
-            return $this->render('game/game_search.html.twig', [
-                'results' => $results
+            return $this->render('game/games_index.html.twig', [
+                'games' => $results
             ]);
         }
 
         /**
-         * @Route("/game/advanced_search.html.twig", name="advanced_game_search")
+         * @Route("/game/advanced_game_search.html.twig", name="advanced_game_search")
          */
-        public function advancedGameSearch(CategoryRepository $categoryRepository){
+        public function advancedGameSearch(GameRepository $gameRepository, CategoryRepository $categoryRepository, Request $request){
             $query=$request->query->all();
+            $maxplayer= $gameRepository->maxPlayer();
             $results = $gameRepository->searchGame($query);
-            return $this->render('game/game_search.html.twig', [
-                'results' => $results
+            $categories = $categoryRepository->findAll();
+            return $this->render('game/advanced_game_search.html.twig', [
+                'games' => $results,
+                'categories' => $categories,
+                'maxplayer' => $maxplayer,
+                'query' => $query
             ]);
         }
     }

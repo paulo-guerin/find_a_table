@@ -1,0 +1,10 @@
+{% extends "head_header_footer/head_header_footer_template.html.twig" %}
+
+{% block main %}
+    {% for msg in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
+    <a href="{{ path("admin_add_game") }}">Rajouter un jeu</a>
+{% endblock %}

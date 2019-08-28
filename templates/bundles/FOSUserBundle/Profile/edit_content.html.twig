@@ -1,0 +1,46 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<h2 class = "pageTitle d-flex justify-content-center">Modifier les informations personnelles</h2>
+<div class ="d-flex justify-content-center">
+    {{ form_start(form, {'method': 'post', 'action': path('fos_user_profile_edit'), 'attr': {'class': 'fos_user_profile_edit'}}) }}
+    <div class="gameShowDescription">
+        {{ form_label(form.email, 'Email') }}
+        <br>
+        {{ form_widget(form.email, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.username, 'Pseudo')  }}
+        <br>
+        {{ form_widget(form.username, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.firstname, 'Prénom') }}
+        <br>
+        {{ form_widget(form.firstname, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.lastname, 'Nom') }}
+        <br>
+        {{ form_widget(form.lastname, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.gender, 'Genre') }}
+        <br>
+        {{ form_widget(form.gender, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.birthdate, 'Date de naissance') }}
+        <br>
+        {{ form_widget(form.birthdate, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.current_password, 'Entrez votre mot de passe') }}
+        <br>
+        {{ form_widget(form.current_password, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+    </div>
+    <div>
+        <input type="submit" value="Update"  class="btn btn-primary"/>
+    </div>
+    {{ form_end(form) }}
+</div>

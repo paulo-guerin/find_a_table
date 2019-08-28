@@ -149,6 +149,14 @@
 .aNoMarginPadding {
   margin-top: 0px; }
 
+.navbarSecondHalf {
+  margin-right: 150px; }
+
+/*.connectionBox{
+  position:absolute;
+  margin-right: 200px;
+  border:black solid 3px;
+}*/
 /* Navbar responsive */
 .testDiv {
   background-color: #1f2e49;
@@ -190,6 +198,13 @@ main {
 .sticker {
   height: 185px;
   background-color: #1f2e49;
+  border: double 2px #fffaf4;
+  border-radius: 15px;
+  transition: box-shadow .3s; }
+
+.stickerRed {
+  height: 185px;
+  background-color: darkred;
   border: double 2px #fffaf4;
   border-radius: 15px;
   transition: box-shadow .3s; }
@@ -435,6 +450,13 @@ main {
   height: auto; }
 
 /* Main container du body pour le show d'une session et d'un game*/
+/*User Crud*/
+.profilePictureShow {
+  height: 100px;
+  width: auto;
+  border: solid 2px black; }
+
+/*User Crud*/
 /*imports*/
 
 /*# sourceMappingURL=index.css.map */
