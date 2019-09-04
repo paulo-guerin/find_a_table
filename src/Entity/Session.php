@@ -19,7 +19,7 @@ class Session
     /**
      * @ORM\Column(type="integer")
      */
-    private $status;
+    private $status = 1;
 
     /**
      * @ORM\Column(type="integer")
@@ -104,6 +104,48 @@ class Session
      * @ORM\ManyToOne(targetEntity="App\Entity\Game", inversedBy="sessions")
      */
     private $game;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $townID;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Town", inversedBy="sessions")
+     */
+    private $town;
+
+    /**
+     * @return mixed
+     */
+    public function getTownID()
+    {
+        return $this->townID;
+    }
+
+    /**
+     * @param mixed $townID
+     */
+    public function setTownID($townID): void
+    {
+        $this->townID = $townID;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTown()
+    {
+        return $this->town;
+    }
+
+    /**
+     * @param mixed $town
+     */
+    public function setTown($town): void
+    {
+        $this->town = $town;
+    }
 
     /**
      * @ORM\Column(type="datetime")
