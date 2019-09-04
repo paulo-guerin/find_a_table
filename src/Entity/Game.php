@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -76,6 +77,16 @@ class Game
     {
         $this->category = $category;
     }
+
+    public function __construct()
+    {
+        $this->sessions = new ArrayCollection();
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Session", mappedBy="host")
+     */
+    private $sessions;
 
     public function getId(): ?int
     {

@@ -3,6 +3,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -22,8 +23,30 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
-        // your own logic
+        $this->sessions = new ArrayCollection();
     }
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Session", mappedBy="host")
+     */
+    private $sessions;
+
+    /**
+     * @return mixed
+     */
+    public function getSessions()
+    {
+        return $this->sessions;
+    }
+
+    /**
+     * @param mixed $sessions
+     */
+    public function setSessions($sessions): void
+    {
+        $this->sessions = $sessions;
+    }
+
 
     /**
      * @ORM\Column(type="string", length=50)
