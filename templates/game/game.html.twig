@@ -1,7 +1,7 @@
 {% extends "head_header_footer/head_header_footer_template.html.twig" %}
 
 {% block main %}
-    {% for msg in app.session.flashBag.get('success') %}
+    {% for msg in app.session.flashBag.get('success_update_game') %}
         <div class="alert alert-success">
             {{ msg }}
         </div>

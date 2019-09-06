@@ -53,11 +53,6 @@ class Game
     private $status = 1;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $categoryID;
-
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="games")
      */
     private $category;
@@ -84,7 +79,23 @@ class Game
     }
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Session", mappedBy="host")
+     * @return mixed
+     */
+    public function getSessions()
+    {
+        return $this->sessions;
+    }
+
+    /**
+     * @param mixed $sessions
+     */
+    public function setSessions($sessions): void
+    {
+        $this->sessions = $sessions;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Session", mappedBy="game")
      */
     private $sessions;
 

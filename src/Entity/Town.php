@@ -28,7 +28,23 @@ class Town
     }
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Session", mappedBy="host")
+     * @return mixed
+     */
+    public function getSessions()
+    {
+        return $this->sessions;
+    }
+
+    /**
+     * @param mixed $sessions
+     */
+    public function setSessions($sessions): void
+    {
+        $this->sessions = $sessions;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Session", mappedBy="town")
      */
     private $sessions;
 

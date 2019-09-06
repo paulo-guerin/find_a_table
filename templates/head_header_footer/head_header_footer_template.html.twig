@@ -32,7 +32,7 @@
                     <li class="sidebarClick position-absolute"><img src="{{ asset("assets/img/burger-menu.png") }}" alt="Menu burger" class="logoSmartphone menuBurgerLogo">
                         <ul class="list-unstyled sidebar position-relative">
                             <li class="navButtonsSidebar d-flex border-bottom border-light">
-                                <a href="#" class="d-flex">
+                                <a href="{{ path("my_sessions") }}" class="d-flex">
                                     <img src="{{ asset("assets/img/cardswhite.png") }}" alt="Logo de cartes dans le bouton des sessions de la barre de navigation" class="imgNavSidebar">
                                     <span class="navFontSidebar pt-1 pl-1">Mes sessions</span>
                                 </a>
@@ -44,7 +44,7 @@
                                 </a>
                             </li>
                             <li class="navButtonsSidebar d-flex border-bottom border-light">
-                                <a href="#" class="d-flex">
+                                <a href="{{ path("new_session") }}" class="d-flex">
                                     <img src="{{ asset("assets/img/Dices_sidebar.png") }}" alt="Logo de dés dans le bouton de création de session de la barre de navigation" class="imgNavSidebar">
                                     <span class="navFontSidebar pt-1 pl-1">Créer une session</span>
                                 </a>
@@ -137,7 +137,7 @@
             <div class="navbarBottomMode py-1">
                 <ul class="navFirstHalf list-unstyled py-0 my-0">
                     <li class="navButtons d-flex align-items-center px-1">
-                        <a href="#" class="d-flex justify-content-around">
+                        <a href="{{ path("my_sessions") }}" class="d-flex justify-content-around">
                             <img src="{{ asset("assets/img/cardswhite.png") }}" alt="Logo de cartes dans le bouton des sessions de la barre de navigation" class="imgNav ml-2 mt-1">
                             <span class="navFont ml-1 mr-2 mb-1 text-align-center">Mes sessions</span>
                         </a>
@@ -149,7 +149,7 @@
                         </a>
                     </li>
                     <li class="navButtons d-flex align-items-center px-1 ml-2">
-                        <a href="#" class="d-flex justify-content-around">
+                        <a href="{{ path("new_session") }}" class="d-flex justify-content-around">
                             <img src="{{ asset("assets/img/Dices_sidebar.png") }}" alt="Logo de dés dans le bouton de création de session de la barre de navigation" class="imgNav ml-2 mt-1">
                             <span class="navFont ml-1 mr-2 mb-1 text-align-center">Créer une session</span>
                         </a>

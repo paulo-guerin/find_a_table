@@ -23,30 +23,23 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
-        $this->sessions = new ArrayCollection();
     }
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Session", mappedBy="host")
-     */
-    private $sessions;
 
     /**
      * @return mixed
      */
-    public function getSessions()
+    public function getId()
     {
-        return $this->sessions;
+        return $this->id;
     }
 
     /**
-     * @param mixed $sessions
+     * @param mixed $id
      */
-    public function setSessions($sessions): void
+    public function setId($id): void
     {
-        $this->sessions = $sessions;
+        $this->id = $id;
     }
-
 
     /**
      * @ORM\Column(type="string", length=50)

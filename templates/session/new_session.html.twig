@@ -1,0 +1,47 @@
+{% extends "head_header_footer/head_header_footer_template.html.twig" %}
+
+{% block main %}
+    {% for msg in app.session.flashBag.get('wrongcity') %}
+        <div class="alert alert-danger">
+            {{ msg }}
+        </div>
+    {% endfor %}
+    {{ form_start(form) }}
+    <div class="gameShowDescription">
+        {{ form_label(form.game, 'Jeu') }}
+        <br>
+        {{ form_widget(form.game, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.city, 'Ville') }}
+        <br>
+        {{ form_widget(form.city, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.date, 'Date') }}
+        <br>
+        {{ form_widget(form.date, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.description, 'Description') }}
+        <br>
+        {{ form_widget(form.description, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.maxplayer, 'Nombre de joueurs maximum') }}
+        <br>
+        {{ form_widget(form.maxplayer, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(form.adress, "Adresse (ne sera montrée qu'aux joueurs acceptés dans la session") }}
+        <br>
+        {{ form_widget(form.adress, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_widget(form.enregistrer, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}

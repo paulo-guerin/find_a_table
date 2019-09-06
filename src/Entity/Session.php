@@ -22,30 +22,19 @@ class Session
     private $status = 1;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $hostID;
-
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="sessions")
      */
     private $host;
 
     /**
-     * @return mixed
+     * @ORM\ManyToOne(targetEntity="App\Entity\Game", inversedBy="sessions")
      */
-    public function getHostID()
-    {
-        return $this->hostID;
-    }
+    private $game;
 
     /**
-     * @param mixed $hostID
+     * @ORM\ManyToOne(targetEntity="App\Entity\Town", inversedBy="sessions")
      */
-    public function setHostID($hostID): void
-    {
-        $this->hostID = $hostID;
-    }
+    private $town;
 
     /**
      * @return mixed
@@ -64,27 +53,6 @@ class Session
     }
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $gameID;
-
-    /**
-     * @return mixed
-     */
-    public function getGameID()
-    {
-        return $this->gameID;
-    }
-
-    /**
-     * @param mixed $gameID
-     */
-    public function setGameID($gameID): void
-    {
-        $this->gameID = $gameID;
-    }
-
-    /**
      * @return mixed
      */
     public function getGame()
@@ -98,37 +66,6 @@ class Session
     public function setGame($game): void
     {
         $this->game = $game;
-    }
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Game", inversedBy="sessions")
-     */
-    private $game;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $townID;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Town", inversedBy="sessions")
-     */
-    private $town;
-
-    /**
-     * @return mixed
-     */
-    public function getTownID()
-    {
-        return $this->townID;
-    }
-
-    /**
-     * @param mixed $townID
-     */
-    public function setTownID($townID): void
-    {
-        $this->townID = $townID;
     }
 
     /**
