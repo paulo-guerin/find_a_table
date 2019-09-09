@@ -57,6 +57,32 @@ class Session
      */
     private $maxplayer;
 
+    public function __construct()
+    {
+        $this->sessioncoms = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSessioncoms()
+    {
+        return $this->sessioncoms;
+    }
+
+    /**
+     * @param mixed $sessioncoms
+     */
+    public function setSessioncoms($sessioncoms): void
+    {
+        $this->sessioncoms = $sessioncoms;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\SessionCom", mappedBy="session")
+     */
+    private $sessioncoms;
+
     /**
      * @return mixed
      */

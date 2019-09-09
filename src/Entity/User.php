@@ -23,6 +23,7 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
+        $this->sessioncoms = new ArrayCollection();
     }
 
     /**
@@ -144,6 +145,27 @@ class User extends BaseUser
     public function setProfilepicture($profilepicture): void
     {
         $this->profilepicture = $profilepicture;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\SessionCom", mappedBy="user")
+     */
+    private $sessioncoms;
+
+    /**
+     * @return mixed
+     */
+    public function getSessioncoms()
+    {
+        return $this->sessioncoms;
+    }
+
+    /**
+     * @param mixed $sessioncoms
+     */
+    public function setSessioncoms($sessioncoms): void
+    {
+        $this->sessioncoms = $sessioncoms;
     }
 
 }

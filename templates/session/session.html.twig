@@ -1,20 +1,25 @@
 {% extends "head_header_footer/head_header_footer_template.html.twig" %}
 
 {% block main %}
-    {% for msg in app.session.flashBag.get('success_update_game') %}
+    {% for msg in app.session.flashBag.get('success_update_session') %}
         <div class="alert alert-success">
             {{ msg }}
         </div>
     {% endfor %}
+    {% for msg in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
+
     {% if app.user %}
         {% if is_granted('ROLE_ADMIN') or app.user.id == session.host.id %}
-            Ouaiiis
-           {# <li ><a href="{{ path("admin_update_game", {"id":game.id}) }}" >Mofifier les informations du jeu</a></li>
-            {% if game.status == 1%}
-                <li ><a href="{{ path("admin_hide_game", {"id":game.id}) }}" class = "text-danger">Supprimer le jeu</a></li>
-            {% elseif game.status == 0 %}
-                <li ><a href="{{ path("admin_show_game", {"id":game.id}) }}" class = "text-danger">Rendre le jeu visible aux utilisateurs</a></li>
-            {% endif %}#}
+            <li ><a href="{{ path("update_session", {"id":session.id}) }}" >Mofifier les informations de la session</a></li>
+            {% if session.status == 1%}
+                <li ><a href="{{ path("hide_session", {"id":session.id}) }}" class = "text-danger">Supprimer le jeu</a></li>
+            {% elseif session.status == 0 %}
+                <li ><a href="{{ path("show_session", {"id":session.id}) }}" class = "text-danger">Rendre le jeu visible aux utilisateurs</a></li>
+            {% endif %}
         {% endif %}
     {% endif %}
     {% if session.status == 1 %}

@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f5c9853-b176-4e48-8bdc-1933fb43118a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/session/advanced_session_search.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/session/session.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/session/update_session.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SessionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/SessionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/SessionRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TownRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TownRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game/game_search.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game/games_index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/games_index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head_header_footer/head_header_footer_template.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/add_game.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/add_game.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/update_game.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/update_game.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/session/advanced_session_search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/advanced_session_search.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/session/my_sessions.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/my_sessions.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/session/session.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/session.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/session/session_index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/session_index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -163,14 +163,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\find_a_table\public\assets\fonts" />
-      <recent name="C:\wamp64\www\find_a_table\public\assets\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\find_a_table\templates\sessions" />
       <recent name="C:\wamp64\www\find_a_table\templates\head_header_footer" />
       <recent name="C:\wamp64\www\find_a_table\templates\games" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\find_a_table\public\assets\fonts" />
+      <recent name="C:\wamp64\www\find_a_table\public\assets\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,7 +228,8 @@
       <workItem from="1567672003433" duration="5953000" />
       <workItem from="1567688837853" duration="25283000" />
       <workItem from="1567864918771" duration="9940000" />
-      <workItem from="1568032896197" duration="7563000" />
+      <workItem from="1568032896197" duration="12725000" />
+      <workItem from="1568066591301" duration="1752000" />
     </task>
     <servers />
   </component>

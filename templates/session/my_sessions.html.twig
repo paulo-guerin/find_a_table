@@ -6,4 +6,9 @@
             {{ msg }}
         </div>
     {% endfor %}
+    {% for msg in app.session.flashBag.get('success_update_session') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
 {% endblock %}

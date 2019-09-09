@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Game;
 use App\Entity\Session;
+use App\Form\GameType;
 use App\Form\SessionType;
 use App\Repository\GameRepository;
 use App\Repository\SessionRepository;
@@ -102,5 +103,61 @@ class SessionController extends AbstractController
             'sessions' => $sessions,
             'games' => $games
         ]);
+    }
+
+    /**
+     * @Route("/session/update_session/{id}", name="update_session")
+     */
+    public function update_session($id, Request $request, EntityManagerInterface $entityManager, SessionRepository $sessionRepository, TownRepository $townRepository){
+        $session = $sessionRepository->find($id);
+        if( $this->getUser() ) {
+            $user = $this->getUser();
+            $userID = $user->getId();
+            $updateSessionForm = $this->createForm(SessionType::class, $session);
+            $formView = $updateSessionForm->createView();
+
+            if ($request->isMethod('Post')) {
+                $query=$request->request->all();
+                $city = $query["session"]["city"];
+                $result = $townRepository->searchTown($city);
+                if(is_null($result)){
+                    $this->addFlash('wrongcityupdate', "Le nom de ville que vous avez entré n'éxiste pas");
+                    return $this->redirectToRoute('update_session');
+                } else {
+                    $updateSessionForm->handleRequest($request);
+                    $session->setTown($result);
+                    $entityManager->persist($session);
+                    $entityManager->flush();
+                    $this->addFlash('success_update_session', 'La session a bien été modifiée!');
+                    return $this->redirectToRoute('my_sessions');
+                }
+            };
+        };
+
+        return $this->render("session/update_session.html.twig", ["form"=>$formView]);
+    }
+
+    /**
+     * @Route("/session/hide_game/{id}", name="hide_session")
+     */
+    public function hide_session($id, Request $request, EntityManagerInterface $entityManager, SessionRepository $sessionRepository){
+        $session = $sessionRepository->find($id);
+        $session->setStatus(0);
+        $entityManager->persist($session);
+        $entityManager->flush();
+        $this->addFlash('success', "La session n'est plus visible par les utilisateurs standards" );
+        return $this->redirectToRoute('session_session', ['id' => $id]);
+    }
+
+    /**
+     * @Route("/session/show_session/{id}", name="show_session")
+     */
+    public function show_session($id, Request $request, EntityManagerInterface $entityManager, SessionRepository $sessionRepository){
+        $session = $sessionRepository->find($id);
+        $session->setStatus(1);
+        $entityManager->persist($session);
+        $entityManager->flush();
+        $this->addFlash('success', "La session est visible par les utilisateurs standards" );
+        return $this->redirectToRoute('session_session', ['id' => $id]);
     }
 }

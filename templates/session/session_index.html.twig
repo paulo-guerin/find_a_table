@@ -113,73 +113,73 @@
                             </div>
                         </div>
                     </div>
-                {% elseif game.status == 0  %}
-                    {% if app.user %}
-                        {% if is_granted('ROLE_ADMIN') %}
-                            <div class="col-lg-6 pt-4">
-                                <div class="row d-flex justify-content-center">
-                                    <div class="col-lg-11 stickerRed">
-                                        <a href="{{ path("game_game", {"id":game.id}) }}" class="stickerLink">
-                                            <div class="row stickerRow">
-                                                {# Image du jeu #}
-                                                <div class="col-3 col-md-1 col-lg-3 stickerImg d-flex align-items-center">
-                                                    <img src="{{ game.image }}" alt="Image du jeu de société" class="imgResize">
-                                                </div>
-                                                {# Image du jeu #}
-                                                {# Description du jeu #}
-                                                <div class="col-9 col-md-11 col-lg-9">
-                                                    <div class="row pt-1">
-                                                        <div class="col-12">
-                                                            <div class="row">
-                                                                <div class="col-12 text-center">
-                                                                    <h4 class="gameTitle overflow-hidden givenHeight">{{ game.title }}</h4>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row d-flex justify-content-between pt-1 gameDescription">
-                                                                <div class="col-6 text-center">
-                                                                    <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="pictoGame">
-                                                                    <span class="gamePictoDescription gamePictoDescriptionHide">Catégorie : </span>
-                                                                </div>
-                                                                <div class="col-6 text-center">
-                                                                    <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
-                                                                    <span class="gamePictoDescription gamePictoDescriptionHide">Temps de jeu : </span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row d-flex justify-content-between gameDescription">
-                                                                <div class="col-6 text-center">
-                                                                    <span class="gamePictoDescription">{{ game.category.name }}</span>
-                                                                </div>
-                                                                <div class="col-6 text-center">
-                                                                    <span class="gamePictoDescription">{{ game.time }}</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row d-flex justify-content-between pt-3 gameDescription">
-                                                                <div class="col-6 text-center">
-                                                                    <img src="{{ asset("assets/img/maxPlayersIcon.png") }}" alt="Icone de joueurs, nombre de joueurs" class="pictoGame">
-                                                                    <span class="gamePictoDescription gamePictoDescriptionHide">Joueurs : </span>
-                                                                </div>
-                                                                <div class="col-6 text-center">
-                                                                    <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
-                                                                    <span class="gamePictoDescription gamePictoDescriptionHide">Note moyenne : </span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row d-flex justify-content-between gameDescription">
-                                                                <div class="col-6 text-center">
-                                                                    <span class="gamePictoDescription">De {{ game.minplayer }} à {{ game.maxplayer }} </span>
-                                                                </div>
-                                                                <div class="col-6 text-center">
-                                                                    <span class="gamePictoDescription">8.5/10</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                {% elseif session.status == 0  %}
+                {% if app.user %}
+                {% if is_granted('ROLE_ADMIN') or app.user.id == session.host.id%}
+                <div class="col-lg-6 pt-4">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-11 sticker">
+                            <a href="{{ path("session_session", {"id":session.id}) }}" class="stickerLink">
+                                <div class="row stickerRed">
+                                    {# Image du jeu #}
+                                    <div class="col-3 col-md-1 col-lg-3 stickerImg d-flex align-items-center">
+                                        <img src="{{ session.game.image }}" alt="Image du jeu de société" class="imgResize">
+                                    </div>
+                                    {# Image du jeu #}
+                                    {# Description du jeu #}
+                                    <div class="col-9 col-md-11 col-lg-9">
+                                        <div class="row pt-1">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-12 text-center">
+                                                        <h4 class="gameTitle overflow-hidden givenHeight">{{ session.game.title }}</h4>
                                                     </div>
                                                 </div>
-                                                {# Description du jeu #}
+                                                <div class="row d-flex justify-content-between pt-1 gameDescription">
+                                                    <div class="col-6 text-center">
+                                                        <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="pictoGame">
+                                                        <span class="gamePictoDescription gamePictoDescriptionHide">Ville : </span>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                        <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
+                                                        <span class="gamePictoDescription gamePictoDescriptionHide">Date : </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row d-flex justify-content-between gameDescription">
+                                                    <div class="col-6 text-center">
+                                                        <span class="gamePictoDescription">{{ session.town.name }}</span>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                        <span class="gamePictoDescription">{{ session.date |date("d/m/Y")}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row d-flex justify-content-between pt-3 gameDescription">
+                                                    <div class="col-6 text-center">
+                                                        <img src="{{ asset("assets/img/maxPlayersIcon.png") }}" alt="Icone de joueurs, nombre de joueurs" class="pictoGame">
+                                                        <span class="gamePictoDescription gamePictoDescriptionHide">Places : </span>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                        <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
+                                                        <span class="gamePictoDescription gamePictoDescriptionHide">Hôte : </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row d-flex justify-content-between gameDescription">
+                                                    <div class="col-6 text-center">
+                                                        <span class="gamePictoDescription">Reste {{ session.maxplayer }} </span>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                        <span class="gamePictoDescription">{{ session.host.username }}</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
+                                    {# Description du jeu #}
                                 </div>
+                                </a>
                             </div>
+                        </div>
+                    </div>
                         {% endif %}
                     {% endif %}
                 {% endif %}

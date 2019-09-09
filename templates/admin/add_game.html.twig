@@ -2,6 +2,45 @@
 
 {% block main %}
     {{ form_start(gameForm) }}
-
+    <div class="gameShowDescription">
+        {{ form_label(gameForm.title, 'Titre') }}
+        <br>
+        {{ form_widget(gameForm.title, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(gameForm.description, 'Description du jeu') }}
+        <br>
+        {{ form_widget(gameForm.description, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(gameForm.minplayer, 'Nombre de joueurs minimum') }}
+        <br>
+        {{ form_widget(gameForm.minplayer, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(gameForm.maxplayer, 'Nombre de joueurs maximum') }}
+        <br>
+        {{ form_widget(gameForm.maxplayer, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(gameForm.image, "Url de l'image du jeu") }}
+        <br>
+        {{ form_widget(gameForm.image, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(gameForm.time, "Temps moyen par partie") }}
+        <br>
+        {{ form_widget(gameForm.time, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(gameForm.category, "Catégorie") }}
+        <br>
+        {{ form_widget(gameForm.category, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_widget(gameForm.enregistrer, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+    </div>
     {{ form_end(gameForm) }}
 {% endblock %}
