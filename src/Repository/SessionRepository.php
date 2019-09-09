@@ -19,6 +19,54 @@ class SessionRepository extends ServiceEntityRepository
         parent::__construct($registry, Session::class);
     }
 
+    public function findAllArray(){
+
+        $qb = $this->createQueryBuilder('s');
+        $selection = $qb->select('s')
+            ->getQuery();
+        $results = $selection->getArrayResult();
+        return $results;
+
+    }
+
+    public function searchSession($query){
+
+        if(isset($query["gameID"]) && isset($query["townID"]) && $query["townID"] != "all" && $query["gameID"] != "all"){
+            $qb = $this->createQueryBuilder('s');
+            $selection = $qb->select('s')
+                ->Where('s.game = :gameID')
+                ->andWhere('s.town = :townID')
+                ->setParameter('gameID', $query["gameID"])
+                ->setParameter('townID', $query["townID"])
+                ->getQuery();
+            $results = $selection->getResult();
+            return $results;
+        }
+        elseif(isset($query["gameID"]) && $query["townID"] == "all"){
+            $qb = $this->createQueryBuilder('s');
+            $selection = $qb->select('s')
+                ->Where('s.game = :gameID')
+                ->setParameter('gameID', $query["gameID"])
+                ->getQuery();
+            $results = $selection->getResult();
+            return $results;
+        }
+
+        elseif(isset($query["townID"]) && $query["gameID"] == "all"){
+            $qb = $this->createQueryBuilder('s');
+            $selection = $qb->select('s')
+                ->Where('s.town = :townID')
+                ->setParameter('townID', $query["townID"])
+                ->getQuery();
+            $results = $selection->getResult();
+            return $results;
+        }
+        elseif($query["townID"] == "all" && $query["gameID"] == "all"){
+            return $results = 0;
+        };
+
+    }
+
     // /**
     //  * @return Session[] Returns an array of Session objects
     //  */

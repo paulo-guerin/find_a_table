@@ -6,6 +6,7 @@ use App\Entity\Game;
 use App\Entity\Session;
 use App\Form\SessionType;
 use App\Repository\GameRepository;
+use App\Repository\SessionRepository;
 use App\Repository\TownRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -15,17 +16,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SessionController extends AbstractController
 {
-    /**
-     * @Route("/session/session_index", name="session_index")
-     */
-    public function session_index(EntityManagerInterface $entityManager)
-    {
-
-        return $this->render('session/session_index.html.twig', [
-            'controller_name' => 'SessionController',
-        ]);
-    }
-
     /**
      * @Route("/session/my_sessions", name="my_sessions")
      */
@@ -39,6 +29,15 @@ class SessionController extends AbstractController
             $this->addFlash('authentify', 'Vous devez vous connecter pour accéder à cette page =)');
             return $this->redirectToRoute('home');
         }
+    }
+
+    /**
+     * @Route("/session/session/{id}", name="session_session")
+     */
+    public function session($id, EntityManagerInterface $entityManager){
+        $sessionRepository = $entityManager->getRepository(Session::class);
+        $session = $sessionRepository -> find($id);
+        return $this->render("session/session.html.twig", ["session" => $session]);
     }
 
     /**
@@ -56,7 +55,7 @@ class SessionController extends AbstractController
                 $query=$request->request->all();
                 $city = $query["session"]["city"];
                 $result = $townRepository->searchTown($city);
-                if($result == []){
+                if(is_null($result)){
                     $this->addFlash('wrongcity', "Le nom de ville que vous avez entré n'éxiste pas");
                     return $this->redirectToRoute('new_session');
                 } else {
@@ -75,5 +74,33 @@ class SessionController extends AbstractController
             $this->addFlash('authentify', 'Vous devez vous connecter pour accéder à cette page =)');
             return $this->redirectToRoute('home');
         }
+    }
+
+    /**
+     * @Route("/session/session_index", name="session_index")
+     */
+    public function session_index(SessionRepository $sessionRepository, GameRepository $gameRepository, TownRepository $townRepository, Request $request){
+        $sessions = $sessionRepository -> findAll();
+        $games = $gameRepository->findAll();
+        return $this->render("session/session_index.html.twig", [
+            'sessions' => $sessions,
+            'games' => $games
+        ]);
+    }
+
+    /**
+     * @Route("/session/advanced_session_search.html.twig", name="advanced_session_search")
+     */
+    public function advancedGameSearch(SessionRepository $sessionRepository, GameRepository $gameRepository, TownRepository $townRepository, Request $request){
+        $query=$request->query->all();
+        $games = $gameRepository->findAll();
+        $sessions = $sessionRepository -> findAll();
+        $results= $sessionRepository->searchSession($query);
+        return $this->render('session/advanced_session_search.html.twig', [
+            'results' => $results,
+            'query' => $query,
+            'sessions' => $sessions,
+            'games' => $games
+        ]);
     }
 }

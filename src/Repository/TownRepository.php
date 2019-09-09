@@ -25,7 +25,7 @@ class TownRepository extends ServiceEntityRepository
                 ->Where('t.name = :city')
                 ->setParameter('city', $city)
                 ->getQuery();
-            $result = $selection->getSingleResult();
+            $result = $selection->getOneOrNullResult();
             return $result;
     }
     // /**

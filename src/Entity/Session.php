@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -35,6 +36,58 @@ class Session
      * @ORM\ManyToOne(targetEntity="App\Entity\Town", inversedBy="sessions")
      */
     private $town;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $adress;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $maxplayer;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status): void
+    {
+        $this->status = $status;
+    }
 
     /**
      * @return mixed
@@ -85,14 +138,36 @@ class Session
     }
 
     /**
-     * @ORM\Column(type="datetime")
+     * @return mixed
      */
-    private $date;
+    public function getDate()
+    {
+        return $this->date;
+    }
 
     /**
-     * @ORM\Column(type="text")
+     * @param mixed $date
      */
-    private $description;
+    public function setDate($date): void
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description): void
+    {
+        $this->description = $description;
+    }
 
     /**
      * @return mixed
@@ -111,65 +186,21 @@ class Session
     }
 
     /**
-     * @ORM\Column(type="string")
+     * @return mixed
      */
-    private $adress;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $maxplayer;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function getStatus(): ?int
-    {
-        return $this->status;
-    }
-
-    public function setStatus(int $status): self
-    {
-        $this->status = $status;
-
-        return $this;
-    }
-
-    public function getDate(): ?\DateTimeInterface
-    {
-        return $this->date;
-    }
-
-    public function setDate(\DateTimeInterface $date): self
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(string $description): self
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    public function getMaxplayer(): ?int
+    public function getMaxplayer()
     {
         return $this->maxplayer;
     }
 
-    public function setMaxplayer(int $maxplayer): self
+    /**
+     * @param mixed $maxplayer
+     */
+    public function setMaxplayer($maxplayer): void
     {
         $this->maxplayer = $maxplayer;
-
-        return $this;
     }
+
+
+
 }
