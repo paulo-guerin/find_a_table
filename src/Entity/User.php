@@ -24,6 +24,7 @@ class User extends BaseUser
     {
         parent::__construct();
         $this->sessioncoms = new ArrayCollection();
+        $this->sessiongroups = new ArrayCollection();
     }
 
     /**
@@ -167,5 +168,26 @@ class User extends BaseUser
     {
         $this->sessioncoms = $sessioncoms;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSessiongroups()
+    {
+        return $this->sessiongroups;
+    }
+
+    /**
+     * @param mixed $sessiongroups
+     */
+    public function setSessiongroups($sessiongroups): void
+    {
+        $this->sessiongroups = $sessiongroups;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\SessionGroup", mappedBy="user")
+     */
+    private $sessiongroups;
 
 }

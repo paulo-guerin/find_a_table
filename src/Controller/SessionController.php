@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Game;
 use App\Entity\Session;
 use App\Entity\SessionCom;
+use App\Entity\SessionGroup;
 use App\Form\GameType;
 use App\Form\SessionComType;
 use App\Form\SessionType;
@@ -69,8 +70,8 @@ class SessionController extends AbstractController
     {
         if( $this->getUser() ) {
             $user = $this->getUser();
-            $userID = $user->getId();
             $session = new Session();
+            $sessiongroup= new SessionGroup();
             $sessionForm = $this->createForm(SessionType::class, $session);
             $formView = $sessionForm->createView();
             if ($request->isMethod('Post')) {
@@ -85,6 +86,10 @@ class SessionController extends AbstractController
                     $session->setHost($user);
                     $session->setTown($result);
                     $entityManager->persist($session);
+                    $sessiongroup->setSession($session);
+                    $sessiongroup->setUser($user);
+                    $sessiongroup->setStatus(2);
+                    $entityManager->persist($sessiongroup);
                     $entityManager->flush();
                     $this->addFlash('success_new_session', 'La session a bien été crée!');
                     return $this->redirectToRoute('my_sessions');

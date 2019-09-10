@@ -60,6 +60,7 @@ class Session
     public function __construct()
     {
         $this->sessioncoms = new ArrayCollection();
+        $this->sessiongroups = new ArrayCollection();
     }
 
     /**
@@ -227,6 +228,26 @@ class Session
         $this->maxplayer = $maxplayer;
     }
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\SessionGroup", mappedBy="session")
+     */
+    private $sessiongroups;
+
+    /**
+     * @return mixed
+     */
+    public function getSessiongroups()
+    {
+        return $this->sessiongroups;
+    }
+
+    /**
+     * @param mixed $sessiongroups
+     */
+    public function setSessiongroups($sessiongroups): void
+    {
+        $this->sessiongroups = $sessiongroups;
+    }
 
 
 }
