@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f5c9853-b176-4e48-8bdc-1933fb43118a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/session/session.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/session.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +220,8 @@
       <workItem from="1567864918771" duration="9940000" />
       <workItem from="1568032896197" duration="12725000" />
       <workItem from="1568066591301" duration="6877000" />
-      <workItem from="1568108847395" duration="17092000" />
+      <workItem from="1568108847395" duration="18033000" />
+      <workItem from="1568146249436" duration="241000" />
     </task>
     <servers />
   </component>
