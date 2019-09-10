@@ -63,12 +63,36 @@ class SessionCom
         $this->session = $session;
     }
 
-
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Session", inversedBy="sessioncoms")
      */
     private $session;
 
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date): void
+    {
+        $this->date = $date;
+    }
+
+
+    public function __construct(){
+        $this->date = new \DateTime('now');
+    }
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $date;
 
     public function getId(): ?int
     {
@@ -83,7 +107,6 @@ class SessionCom
     public function setStatus(?int $status): self
     {
         $this->status = $status;
-
         return $this;
     }
 

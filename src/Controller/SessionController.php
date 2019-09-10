@@ -4,9 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Game;
 use App\Entity\Session;
+use App\Entity\SessionCom;
 use App\Form\GameType;
+use App\Form\SessionComType;
 use App\Form\SessionType;
 use App\Repository\GameRepository;
+use App\Repository\SessionComRepository;
 use App\Repository\SessionRepository;
 use App\Repository\TownRepository;
 use Doctrine\ORM\EntityManager;
@@ -35,10 +38,28 @@ class SessionController extends AbstractController
     /**
      * @Route("/session/session/{id}", name="session_session")
      */
-    public function session($id, EntityManagerInterface $entityManager){
+    public function session($id, EntityManagerInterface $entityManager, SessionComRepository $sessionComRepository, Request $request){
         $sessionRepository = $entityManager->getRepository(Session::class);
+        $sessioncom = new SessionCom();
+        $sessionComForm = $this->createForm(SessionComType::class, $sessioncom);
+        $formView = $sessionComForm->createView();
+        $user = $this->getUser();
         $session = $sessionRepository -> find($id);
-        return $this->render("session/session.html.twig", ["session" => $session]);
+        if ($request->isMethod('Post')) {
+            $sessionComForm->handleRequest($request);
+            $sessioncom->setUser($user);
+            $sessioncom->setStatus(1);
+            $sessioncom->setSession($session);
+            $entityManager->persist($sessioncom);
+            $entityManager->flush();
+            $this->addFlash('success_new_com', 'Commentaire ajouté');
+            return $this->redirectToRoute('session_session', ['id' => $id]);
+        };
+
+        return $this->render("session/session.html.twig", [
+            "session" => $session,
+            "form" => $formView
+        ]);
     }
 
     /**
@@ -138,14 +159,14 @@ class SessionController extends AbstractController
     }
 
     /**
-     * @Route("/session/hide_game/{id}", name="hide_session")
+     * @Route("/session/hide_session/{id}", name="hide_session")
      */
     public function hide_session($id, Request $request, EntityManagerInterface $entityManager, SessionRepository $sessionRepository){
         $session = $sessionRepository->find($id);
         $session->setStatus(0);
         $entityManager->persist($session);
         $entityManager->flush();
-        $this->addFlash('success', "La session n'est plus visible par les utilisateurs standards" );
+        $this->addFlash('success_hide', "La session n'est plus visible par les utilisateurs standards" );
         return $this->redirectToRoute('session_session', ['id' => $id]);
     }
 
@@ -160,4 +181,17 @@ class SessionController extends AbstractController
         $this->addFlash('success', "La session est visible par les utilisateurs standards" );
         return $this->redirectToRoute('session_session', ['id' => $id]);
     }
+
+    /**
+     * @Route("/session/delete_com/{id}{sessionID}", name="delete_com")
+     */
+    public function delete_com($id, $sessionID, EntityManagerInterface $entityManager, SessionComRepository $sessionComRepository){
+        $com = $sessionComRepository->find($id);
+        $entityManager->remove($com);
+        $entityManager->flush();
+        $this->addFlash('delete_com', "Votre commentaire a bien été supprimé" );
+        return $this->redirectToRoute('session_session', ['id' => $sessionID]);
+    }
+
+
 }
