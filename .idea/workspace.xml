@@ -3,16 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="1f5c9853-b176-4e48-8bdc-1933fb43118a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/90d4839793b32a1f8be6103052a1a26b7518b3a2/head_header_footer.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/90d4839793b32a1f8be6103052a1a26b7518b3a2/head_header_footer.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/90d4839793b32a1f8be6103052a1a26b7518b3a2/main_show.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/90d4839793b32a1f8be6103052a1a26b7518b3a2/main_show.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/.sass-cache/90d4839793b32a1f8be6103052a1a26b7518b3a2/user_crud.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/.sass-cache/90d4839793b32a1f8be6103052a1a26b7518b3a2/user_crud.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/head_header_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/head_header_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/index.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/main_show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main_show.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/user_crud.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/user_crud.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/SessionCom.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/SessionCom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/session/advanced_session_search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/advanced_session_search.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/session/my_sessions.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/my_sessions.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/session/new_session.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/new_session.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/session/session.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/session.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/session/session_index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/session/session_index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,6 +234,8 @@
       <workItem from="1568032896197" duration="12725000" />
       <workItem from="1568066591301" duration="6877000" />
       <workItem from="1568108847395" duration="7577000" />
+      <workItem from="1568193020395" duration="409000" />
+      <workItem from="1568193523083" duration="15971000" />
     </task>
     <servers />
   </component>

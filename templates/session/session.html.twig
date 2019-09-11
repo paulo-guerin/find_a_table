@@ -21,20 +21,25 @@
             {{ msg }}
         </div>
     {% endfor %}
+    {% for msg in app.session.flashBag.get('success_new_participant') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
 
     {% if app.user %}
         {% if is_granted('ROLE_ADMIN') or app.user.id == session.host.id %}
             <li ><a href="{{ path("update_session", {"id":session.id}) }}" >Mofifier les informations de la session</a></li>
             {% if session.status == 1%}
-                <li ><a href="{{ path("hide_session", {"id":session.id}) }}" class = "text-danger">Supprimer le jeu</a></li>
+                <li ><a href="{{ path("hide_session", {"id":session.id}) }}" class = "text-danger">Supprimer la session</a></li>
             {% elseif session.status == 0 %}
-                <li ><a href="{{ path("show_session", {"id":session.id}) }}" class = "text-danger">Rendre le jeu visible aux utilisateurs</a></li>
+                <li ><a href="{{ path("show_session", {"id":session.id}) }}" class = "text-danger">Rendre la session aux utilisateurs</a></li>
             {% endif %}
         {% endif %}
         {% if session.status == 1 %}
-            <div class="container-fluid">
-                <h3 class="ml-5 mb-2 gameShowTitle">{{ session.game.title }}</h3>
-                <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="gameShowIcon ml-5">
+            <div class="container">
+                <h3 class="mb-2 gameShowTitle">{{ session.game.title }}</h3>
+                <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="gameShowIcon">
                 <span>Ville : {{ session.town.name }}</span>
                 <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
                 <span>Date et heure : {{ session.date |date("d/m/Y h:m") }}</span>
@@ -42,22 +47,22 @@
                 <span>Nombre de joueurs : {{ session.maxplayer }}</span>
                 <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone de note" class="gameShowIcon">
                 <span>Hôte : {{ session.host.username }}</span>
-                <div class="row d-flex justify-content-center mt-4">
+                <div class="row d-flex justify-content-around mt-4">
                     <div class="col-7 ">
                         <div class="gameShowDescription">
                             <p>{{ session.description }}</p>
                         </div>
                     </div>
                     <div class="col-4">
-                        <img src="{{ session.game.image }}" alt="Image du jeu de société" class="gameShowImage">
+                        <img src="{{ session.game.image }}" alt="Image du jeu de société" class="gameShowImageSession">
                     </div>
                 </div>
             </div>
         {% elseif app.user %}
             {% if is_granted('ROLE_ADMIN') or app.user.id == session.host.id %}
-                <div class="container-fluid">
-                    <h3 class="ml-5 mb-2 gameShowTitle">{{ session.game.title }}</h3>
-                    <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="gameShowIcon ml-5">
+                <div class="container">
+                    <h3 class="mb-2 gameShowTitle">{{ session.game.title }}</h3>
+                    <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="gameShowIcon">
                     <span>Ville : {{ session.town.name }}</span>
                     <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="gameShowIcon">
                     <span>Date et heure : {{ session.date |date("d/m/Y h:m") }}</span>
@@ -65,14 +70,14 @@
                     <span>Nombre de joueurs : {{ session.maxplayer }}</span>
                     <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone de note" class="gameShowIcon">
                     <span>Hôte : {{ session.host.username }}</span>
-                    <div class="row d-flex justify-content-center mt-4">
+                    <div class="row d-flex justify-content-around mt-4">
                         <div class="col-7 ">
                             <div class="gameShowDescription">
                                 <p>{{ session.description }}</p>
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="{{ session.game.image }}" alt="Image du jeu de société" class="gameShowImage">
+                            <img src="{{ session.game.image }}" alt="Image du jeu de société" class="gameShowImageSession">
                         </div>
                     </div>
                 </div>
@@ -81,46 +86,108 @@
             <p>Cette session n'est pas visible par les utilisateurs, nos excuses</p>
         {% endif %}
         <br>
-        <h3>Commentaires</h3>
         <br>
-        {% for com in session.sessioncoms %}
-            <div class="comShow border border-secondary rounded ml-3 mr-3">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center ml-2">
-                        <img src="{{ asset("assets/uploads/"~com.user.profilepicture) }}" alt="Photo de profil de l'utilisateur" class="profilePictureShow">
-                        <p class="ml-2">
-                           De : {{ com.user.username }}
+        {% set participantids = [] %}
+        {% for participantsession in session.participantsessions %}
+            {% set participantids = participantids|merge([participantsession.user.id ]) %}
+        {% endfor %}
+        <div class="container">
+            {% if app.user.id not in participantids%}
+                {% if session.maxplayer is not same as(0) %}
+                    <a href="{{ path("new_participantsession", {"id":session.id}) }}" class="ml-2 btn btn-primary">Faire une demande pour rejoindre la session</a>
+                    <br>
+                    <br>
+                {% else %}
+                    <p class="text-light bg-dark"><b class="ml-2">Le nombre de participant maximal a été atteint</b></p>
+                {% endif %}
+            {% elseif app.user.id in participantids and app.user is not same as(session.host)%}
+                {% for participantsession in session.participantsessions %}
+                    {% if app.user.id is same as(participantsession.user.id) and participantsession.status == 0 %}
+                        {% if session.maxplayer is not same as(0) %}
+                            <p class="text-light bg-dark"><b class="ml-2">Votre demande de rejoindre la session va être prise en compte par l'hôte</b></p>
+                        {% else %}
+                            <p class="text-light bg-dark"><b class="ml-2">La session est malheureusement complète pour le moment</b></p>
+                        {% endif %}
+                    {% elseif app.user.id is same as(participantsession.user.id) and participantsession.status == 1 %}
+                        <p class="text-light bg-dark"><b class="ml-2">Vous avez rejoins la session! L'adresse est : {{ session.adress }}</b></p>
+                    {% endif %}
+                {% endfor %}
+            {% elseif app.user == session.host %}
+                <h3>Participants</h3>
+                <br>
+                <table class="table table-striped">
+                    <thead class="bg-dark text-light">
+                    <tr>
+                        <th><h4>Utilisateur</h4></th>
+                        <th><h4>Statut</h4></th>
+                        <th><h4>Action</h4></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                {% for participantsession in session.participantsessions %}
+                    <tr>
+                        <td><h6>{{ participantsession.user.username }}</h6></td>
+                        {% if participantsession.status == 0 %}
+                            <td><h6>En attente</h6></td>
+                            {% if session.maxplayer is not same as(0) %}
+                                <td><h6><a href=" {{ path("accept_refuse_participant", {"sessionID":session.id, "userID":participantsession.user.id, "action":1}) }}">Accepter</a></h6></td>
+                            {% else %}
+                                <td><h6>Participants au max</h6></td>
+                            {% endif %}
+                        {% elseif participantsession.status == 1 %}
+                            <td> <h6>Accepté</h6></td>
+                            <td><h6><a href=" {{ path("accept_refuse_participant", {"sessionID":session.id, "userID":participantsession.user.id, "action":0}) }}">Repasser en attente</a></h6></td>
+                        {% elseif participantsession.status == 2 %}
+                            <td><h6>Hôte</h6></td>
+                            <td><h6>-</h6></td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+
+            <h3>Commentaires</h3>
+            <br>
+            {% for com in session.sessioncoms %}
+                <div class="comShow border border-secondary rounded ml-3 mr-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center ml-2 mt-2">
+                            <img src="{{ asset("assets/uploads/"~com.user.profilepicture) }}" alt="Photo de profil de l'utilisateur" class="profilePictureComment">
+                            <p class="ml-2">
+                               De : {{ com.user.username }}
+                            </p>
+                        </div>
+                        <p class = "mr-2">
+                            {{ com.date|date('d-m-Y')  }}
                         </p>
                     </div>
-                    <p class = "mr-2">
-                        {{ com.date|date('d-m-Y')  }}
+                    <hr>
+                    <br>
+                    <p class="ml-2">
+                        {{ com.content }}
                     </p>
+                    {% if app.user == com.user %}
+                        <a href="{{ path("delete_com", {"id":com.id, "sessionID":session.id}) }}" class="ml-2">Supprimer le commentaire</a>
+                    {% endif %}
                 </div>
-                <hr>
                 <br>
-                <p class="ml-2">
-                    {{ com.content }}
-                </p>
-                {% if app.user == com.user %}
-                    <a href="{{ path("delete_com", {"id":com.id, "sessionID":session.id}) }}" class="ml-2">Supprimer le commentaire</a>
-                {% endif %}
+            {% endfor %}
+            <br>
+            {{ form_start(form) }}
+            <div class="gameShowDescription">
+                {{ form_label(form.content, 'Ajoutez un commentaire') }}
+                <br>
+                {{ form_widget(form.content, { 'attr': {'class': 'form_style'} }) }}
+                <br>
+                <br>
+                {{ form_widget(form.enregistrer, { 'attr': {'class': 'form_style'} }) }}
+                <br>
+                <br>
             </div>
-            <br>
-        {% endfor %}
-        <br>
-        {{ form_start(form) }}
-        <div class="gameShowDescription">
-            {{ form_label(form.content, 'Ajoutez un commentaire') }}
-            <br>
-            {{ form_widget(form.content, { 'attr': {'class': 'form_style'} }) }}
-            <br>
-            <br>
-            {{ form_widget(form.enregistrer, { 'attr': {'class': 'form_style'} }) }}
-            <br>
-            <br>
-        </div>
-        {{ form_end(form) }}
-    {% else %}
-        Vous devez être connecté pour accéder aux informations de la session
-    {% endif %}
+            {{ form_end(form) }}
+        {% else %}
+            Vous devez être connecté pour accéder aux informations de la session
+        {% endif %}
+    </div>
 {% endblock %}

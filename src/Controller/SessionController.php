@@ -3,12 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\Game;
+use App\Entity\ParticipantSession;
 use App\Entity\Session;
 use App\Entity\SessionCom;
 use App\Form\GameType;
 use App\Form\SessionComType;
 use App\Form\SessionType;
 use App\Repository\GameRepository;
+use App\Repository\ParticipantSessionRepository;
 use App\Repository\SessionComRepository;
 use App\Repository\SessionRepository;
 use App\Repository\TownRepository;
@@ -23,11 +25,12 @@ class SessionController extends AbstractController
     /**
      * @Route("/session/my_sessions", name="my_sessions")
      */
-    public function my_sessions(EntityManagerInterface $entityManager)
+    public function my_sessions(EntityManagerInterface $entityManager, ParticipantSessionRepository $participantSessionRepository)
     {
         if( $this->getUser() ) {
+            $participantsessions = $participantSessionRepository->mysessions($this->getUser());
             return $this->render('session/my_sessions.html.twig', [
-                'controller_name' => 'SessionController',
+                'participantsessions' => $participantsessions,
             ]);
         } else {
             $this->addFlash('authentify', 'Vous devez vous connecter pour accéder à cette page =)');
@@ -69,8 +72,8 @@ class SessionController extends AbstractController
     {
         if( $this->getUser() ) {
             $user = $this->getUser();
-            $userID = $user->getId();
             $session = new Session();
+            $participantsession = new ParticipantSession();
             $sessionForm = $this->createForm(SessionType::class, $session);
             $formView = $sessionForm->createView();
             if ($request->isMethod('Post')) {
@@ -85,6 +88,10 @@ class SessionController extends AbstractController
                     $session->setHost($user);
                     $session->setTown($result);
                     $entityManager->persist($session);
+                    $participantsession->setUser($user);
+                    $participantsession->setSession($session);
+                    $participantsession->setStatus(2);
+                    $entityManager->persist($participantsession);
                     $entityManager->flush();
                     $this->addFlash('success_new_session', 'La session a bien été crée!');
                     return $this->redirectToRoute('my_sessions');
@@ -193,5 +200,45 @@ class SessionController extends AbstractController
         return $this->redirectToRoute('session_session', ['id' => $sessionID]);
     }
 
+    /**
+     * @Route("/session/new_participantsession/{id}", name="new_participantsession")
+     */
+    public function new_participantsession($id, Request $request, EntityManagerInterface $entityManager, SessionRepository $sessionRepository){
+        $session = $sessionRepository->find($id);
+        $user = $this->getUser();
+        $participantsession = new ParticipantSession();
+        $participantsession->setStatus(0);
+        $participantsession->setUser($user);
+        $participantsession->setSession($session);
+        $entityManager->persist($participantsession);
+        $entityManager->flush();
+        $this->addFlash('success_new_participant', "Il n'y a plus qu'à attendre la décision de l'hôte!" );
+        return $this->redirectToRoute('session_session', ['id' => $id]);
+    }
+
+    /**
+     * @Route("/session/accept_refuse_participant/{sessionID}{userID}{action}", name="accept_refuse_participant")
+     */
+    public function accept_refuse_participant($sessionID, $userID, $action, Request $request, EntityManagerInterface $entityManager, SessionRepository $sessionRepository, ParticipantSessionRepository $participantSessionRepository){
+        $session = $sessionRepository->find($sessionID);
+        $accepted_or_refused_user = $participantSessionRepository->find_participant($userID, $sessionID);
+        if($action == 1) {
+            $session->setMaxplayer(  $session->getMaxplayer() - 1);
+            $entityManager->persist($session);
+            $accepted_or_refused_user->setStatus(1);
+            $entityManager->persist($accepted_or_refused_user);
+            $entityManager->flush();
+            $this->addFlash('success_accept_participant', 'Vous avez bien accepté le participant');
+            return $this->redirectToRoute('session_session', ['id' => $sessionID]);
+        } elseif($action== 0){
+            $session->setMaxplayer($session->getMaxplayer() + 1);
+            $entityManager->persist($session);
+            $accepted_or_refused_user->setStatus(0);
+            $entityManager->persist($accepted_or_refused_user);
+            $entityManager->flush();
+            $this->addFlash('success_accept_participant', 'Vous avez refusé le participant');
+            return $this->redirectToRoute('session_session', ['id' => $sessionID]);
+        };
+    }
 
 }

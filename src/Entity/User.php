@@ -24,6 +24,28 @@ class User extends BaseUser
     {
         parent::__construct();
         $this->sessioncoms = new ArrayCollection();
+        $this->participantsessions = new ArrayCollection();
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ParticipantSession", mappedBy="user")
+     */
+    private $participantsessions;
+
+    /**
+     * @return mixed
+     */
+    public function getParticipantsessions()
+    {
+        return $this->participantsessions;
+    }
+
+    /**
+     * @param mixed $participantsessions
+     */
+    public function setParticipantsessions($participantsessions): void
+    {
+        $this->participantsessions = $participantsessions;
     }
 
     /**

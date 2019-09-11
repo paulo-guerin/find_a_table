@@ -4,7 +4,7 @@
     <div class="container mainContainer">
         {# Titre de la page de jeu et barre de recherche#}
         <div class="d-flex justify-content-between align-items-center pt-4 responsiveDisplay">
-            <h2 class="pageTitle pl-3">Annuaire des jeux</h2>
+            <h2 class="pageTitle pl-3">Annuaire des sessions</h2>
             <div class="d-flex align-items-center">
                 <form action="{{ path("advanced_session_search") }}" method="get">
                     <span>Nom du jeu</span>
@@ -48,7 +48,7 @@
         <div class="row d-flex justify-content-between">
             {# Boucle permettant le display des jeux en vignettes #}
             {% for session in sessions %}
-                {% if session.status == 1 %}
+                {% if session.status == 1 and date(session.date) > date() %}
                     <div class="col-lg-6 pt-4">
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-11 sticker">
