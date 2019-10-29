@@ -1,0 +1,191 @@
+{% extends "head_header_footer/head_header_footer_template.html.twig" %}
+
+{% block main %}
+    <div class="container mainContainer">
+        {# Titre de la page de jeu et barre de recherche#}
+        <div class="d-flex justify-content-between align-items-center pt-4 responsiveDisplay">
+            <h2 class="pageTitle pl-3">Annuaire des jeux</h2>
+            <div class="d-flex align-items-center">
+                <form action="{{ path("advanced_session_search") }}" method="get">
+                    <span>Nom du jeu</span>
+                    <select name="gameID">
+                        <option value="all">Tous</option>
+                        {% for game in games %}
+                            <option value={{ game.id }}>{{ game.title }}</option>
+                        {% endfor %}
+                    </select>
+                    <span>Ville</span>
+                    {% set townIDs = [] %}
+                    {% set townNames = [] %}
+                    {% for session in sessions %}
+                        {% if townIDs == [] %}
+                            {% set townIDs = townIDs|merge([session.town.id]) %}
+                            {% set townNames = townNames|merge([session.town.name]) %}
+                        {% else %}
+                            {% if session.town.id not in townIDs %}
+                                {% set townIDs = townIDs|merge([session.town.id]) %}
+                                {% set townNames = townNames|merge([session.town.name]) %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    <select name="townID">
+                        <option value="all">Toutes</option>
+                        {% for i in 0..townIDs|length - 1 %}
+                            <option value={{ townIDs[i] }}>{{ townNames[i]}}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Rechercher">
+                </form>
+            </div>
+        </div>
+        {# Double ligne sous le titre #}
+        <div class="doubleLine ml-2"></div>
+        <div class="doubleLine pt-1"></div>
+        {# Double ligne sous le titre #}
+        {# Titre de la page de jeu et barre de recherche#}
+        {# Display des vignettes de jeu #}
+        <div class="row d-flex justify-content-between">
+            {# Boucle permettant le display des jeux en vignettes #}
+            {% for result in results %}
+                {% if result.status == 1 %}
+                    <div class="col-lg-6 pt-4">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-11 sticker">
+                                <a href="{{ path("session_session", {"id":result.id}) }}" class="stickerLink">
+                                    <div class="row stickerRow">
+                                        {# Image du jeu #}
+                                        <div class="col-3 col-md-1 col-lg-3 stickerImg d-flex align-items-center">
+                                            <img src="{{ result.game.image }}" alt="Image du jeu de société" class="imgResize">
+                                        </div>
+                                        {# Image du jeu #}
+                                        {# Description du jeu #}
+                                        <div class="col-9 col-md-11 col-lg-9">
+                                            <div class="row pt-1">
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-12 text-center">
+                                                            <h4 class="gameTitle overflow-hidden givenHeight">{{ result.game.title }}</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row d-flex justify-content-between pt-1 gameDescription">
+                                                        <div class="col-6 text-center">
+                                                            <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="pictoGame">
+                                                            <span class="gamePictoDescription gamePictoDescriptionHide">Ville : </span>
+                                                        </div>
+                                                        <div class="col-6 text-center">
+                                                            <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
+                                                            <span class="gamePictoDescription gamePictoDescriptionHide">Date : </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row d-flex justify-content-between gameDescription">
+                                                        <div class="col-6 text-center">
+                                                            <span class="gamePictoDescription">{{ result.town.name }}</span>
+                                                        </div>
+                                                        <div class="col-6 text-center">
+                                                            <span class="gamePictoDescription">{{ result.date |date("d/m/Y")}}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row d-flex justify-content-between pt-3 gameDescription">
+                                                        <div class="col-6 text-center">
+                                                            <img src="{{ asset("assets/img/maxPlayersIcon.png") }}" alt="Icone de joueurs, nombre de joueurs" class="pictoGame">
+                                                            <span class="gamePictoDescription gamePictoDescriptionHide">Places : </span>
+                                                        </div>
+                                                        <div class="col-6 text-center">
+                                                            <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
+                                                            <span class="gamePictoDescription gamePictoDescriptionHide">Hôte : </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row d-flex justify-content-between gameDescription">
+                                                        <div class="col-6 text-center">
+                                                            <span class="gamePictoDescription">Reste {{ result.maxplayer }} </span>
+                                                        </div>
+                                                        <div class="col-6 text-center">
+                                                            <span class="gamePictoDescription">{{ result.host.username }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {# Description du jeu #}
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% elseif result.status == 0  %}
+                    {% if app.user %}
+                        {% if is_granted('ROLE_ADMIN') or app.user.id == result.host.id%}
+                            <div class="col-lg-6 pt-4">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-11 sticker">
+                                        <a href="{{ path("session_session", {"id":result.id}) }}" class="stickerLink">
+                                            <div class="row stickerRed">
+                                                {# Image du jeu #}
+                                                <div class="col-3 col-md-1 col-lg-3 stickerImg d-flex align-items-center">
+                                                    <img src="{{ result.game.image }}" alt="Image du jeu de société" class="imgResize">
+                                                </div>
+                                                {# Image du jeu #}
+                                                {# Description du jeu #}
+                                                <div class="col-9 col-md-11 col-lg-9">
+                                                    <div class="row pt-1">
+                                                        <div class="col-12">
+                                                            <div class="row">
+                                                                <div class="col-12 text-center">
+                                                                    <h4 class="gameTitle overflow-hidden givenHeight">{{ result.game.title }}</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row d-flex justify-content-between pt-1 gameDescription">
+                                                                <div class="col-6 text-center">
+                                                                    <img src="{{ asset("assets/img/flagIcon.png") }}" alt="Icone de drapeau, catégorie du jeu" class="pictoGame">
+                                                                    <span class="gamePictoDescription gamePictoDescriptionHide">Ville : </span>
+                                                                </div>
+                                                                <div class="col-6 text-center">
+                                                                    <img src="{{ asset("assets/img/timeIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
+                                                                    <span class="gamePictoDescription gamePictoDescriptionHide">Date : </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row d-flex justify-content-between gameDescription">
+                                                                <div class="col-6 text-center">
+                                                                    <span class="gamePictoDescription">{{ result.town.name }}</span>
+                                                                </div>
+                                                                <div class="col-6 text-center">
+                                                                    <span class="gamePictoDescription">{{ result.date |date("d/m/Y")}}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row d-flex justify-content-between pt-3 gameDescription">
+                                                                <div class="col-6 text-center">
+                                                                    <img src="{{ asset("assets/img/maxPlayersIcon.png") }}" alt="Icone de joueurs, nombre de joueurs" class="pictoGame">
+                                                                    <span class="gamePictoDescription gamePictoDescriptionHide">Places : </span>
+                                                                </div>
+                                                                <div class="col-6 text-center">
+                                                                    <img src="{{ asset("assets/img/scoreIcon.png") }}" alt="Icone d'horloge, temps de jeu moyen" class="pictoGame">
+                                                                    <span class="gamePictoDescription gamePictoDescriptionHide">Hôte : </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row d-flex justify-content-between gameDescription">
+                                                                <div class="col-6 text-center">
+                                                                    <span class="gamePictoDescription">Reste {{ result.maxplayer }} </span>
+                                                                </div>
+                                                                <div class="col-6 text-center">
+                                                                    <span class="gamePictoDescription">{{ result.host.username }}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {# Description du jeu #}
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {# Boucle permettant le display des jeux en vignettes #}
+        </div>
+        {# Display des vignettes de jeu #}
+    </div>
+
+{% endblock %}

@@ -35,19 +35,6 @@
             $gameRepository = $entityManager->getRepository(Game::class);
             $game = $gameRepository -> find($id);
             return $this->render("game/game.html.twig", ["game" => $game]);
-
-        }
-
-        /**
-         * @Route("/game/search.html.twig", name="game_search")
-         */
-        public function gameSearch(GameRepository $gameRepository, Request $request){
-            $query=$request->query->all();
-            $results = $gameRepository->searchGame($query);
-
-            return $this->render('game/games_index.html.twig', [
-                'games' => $results
-            ]);
         }
 
         /**

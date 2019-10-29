@@ -449,12 +449,17 @@ main {
   width: 100%;
   height: auto; }
 
+.hidden {
+  display: none; }
+
+.comShow {
+  border: solid, 1px, #1f2e49; }
+
 /* Main container du body pour le show d'une session et d'un game*/
 /*User Crud*/
 .profilePictureShow {
   height: 100px;
-  width: auto;
-  border: solid 2px black; }
+  width: auto; }
 
 /*User Crud*/
 /*imports*/

@@ -1,5 +1,46 @@
 {% extends "head_header_footer/head_header_footer_template.html.twig" %}
 
 {% block main %}
-    {{ form(updateGameForm) }}
+    {{ form_start(updateGameForm) }}
+    <div class="gameShowDescription">
+        {{ form_label(updateGameForm.title, 'Titre') }}
+        <br>
+        {{ form_widget(updateGameForm.title, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(updateGameForm.description, 'Description du jeu') }}
+        <br>
+        {{ form_widget(updateGameForm.description, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(updateGameForm.minplayer, 'Nombre de joueurs minimum') }}
+        <br>
+        {{ form_widget(updateGameForm.minplayer, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(updateGameForm.maxplayer, 'Nombre de joueurs maximum') }}
+        <br>
+        {{ form_widget(updateGameForm.maxplayer, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(updateGameForm.image, "Url de l'image du jeu") }}
+        <br>
+        {{ form_widget(updateGameForm.image, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(updateGameForm.time, "Temps moyen par partie") }}
+        <br>
+        {{ form_widget(updateGameForm.time, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_label(updateGameForm.category, "Catégorie") }}
+        <br>
+        {{ form_widget(updateGameForm.category, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+        {{ form_widget(updateGameForm.enregistrer, { 'attr': {'class': 'form_style'} }) }}
+        <br>
+        <br>
+    </div>
+    {{ form_end(updateGameForm) }}
 {% endblock %}

@@ -1,0 +1,14 @@
+{% extends "head_header_footer/head_header_footer_template.html.twig" %}
+
+{% block main %}
+    {% for msg in app.session.flashBag.get('success_new_session') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
+    {% for msg in app.session.flashBag.get('success_update_session') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,6 +1,13 @@
 {% extends "head_header_footer/head_header_footer_template.html.twig" %}
 
 {% block main %}
+
+    {% for msg in app.session.flashBag.get('authentify') %}
+        <div class="alert alert-danger">
+            {{ msg }}
+        </div>
+    {% endfor %}
+
     <div class="d-flex flex-wrap justify-content-around">
         <div class="testDiv d-flex justify-content-center align-items-center">
             <a href="#">Lien Test</a>

@@ -55,7 +55,7 @@ class AdminController extends AbstractController
             if($updateGameForm->isValid()) {
                 $entityManager->persist($game);
                 $entityManager->flush();
-                $this->addFlash('success', 'Le jeu a bien été modifié!');
+                $this->addFlash('success_update_game', 'Le jeu a bien été modifié!');
                 return $this->redirectToRoute('game_game', ['id' => $id]);
             }
         };
