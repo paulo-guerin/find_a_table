@@ -118,9 +118,9 @@ class SessionController extends AbstractController
     }
 
     /**
-     * @Route("/session/advanced_session_search.html.twig", name="advanced_session_search")
+     * @Route("/session/advanced_session_search", name="advanced_session_search")
      */
-    public function advancedGameSearch(SessionRepository $sessionRepository, GameRepository $gameRepository, TownRepository $townRepository, Request $request){
+    public function advancedSessionSearch(SessionRepository $sessionRepository, GameRepository $gameRepository, TownRepository $townRepository, Request $request){
         $query=$request->query->all();
         $games = $gameRepository->findAll();
         $sessions = $sessionRepository -> findAll();

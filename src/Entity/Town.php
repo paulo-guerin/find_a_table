@@ -58,6 +58,11 @@ class Town
      */
     private $longitude;
 
+    /**
+     * @ORM\Column(type="string", length=10)
+     */
+    private $postalcode;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -95,6 +100,18 @@ class Town
     public function setLongitude(?string $longitude): self
     {
         $this->longitude = $longitude;
+
+        return $this;
+    }
+
+    public function getPostalcode(): ?string
+    {
+        return $this->postalcode;
+    }
+
+    public function setPostalcode(string $postalcode): self
+    {
+        $this->postalcode = $postalcode;
 
         return $this;
     }
