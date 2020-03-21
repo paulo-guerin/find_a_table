@@ -4,6 +4,8 @@ namespace App\Repository;
 
 use App\Entity\Game;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Query;
+use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -19,105 +21,35 @@ class GameRepository extends ServiceEntityRepository
         parent::__construct($registry, Game::class);
     }
 
-    public function searchGame($query){
-
-        if(isset($query["category"])){
-            if($query["category"] == "all"){
-                unset($query["category"]);
-            };
-        };
-
-        if(count($query)==null){
-            return $results=[];
+    /**
+     * @return Query
+     */
+    public function searchGames($search): Query
+    {
+        $query = $this->createQueryBuilder('g');
+        
+        if(isset($search["entry"])) {
+            $query = $query
+                ->andWhere('g.title LIKE :entry')
+                ->setParameter('entry', "%" . $search["entry"] . "%");
         }
-        elseif(count($query)==1 && isset($query["query"])) {
-            $qb = $this->createQueryBuilder('g');
-            $selection = $qb->select('g')
-                ->Where('g.title LIKE :query')
-                ->setParameter('query', "%" . $query["query"] . "%")
-                ->getQuery();
-            $results = $selection->getResult();
-            return $results;
-        }
-        elseif(count($query)==2 && isset($query["query"])) {
-            if($query["players"] == "empty"){
-                $qb = $this->createQueryBuilder('g');
-                $selection = $qb->select('g')
-                    ->Where('g.title LIKE :query')
-                    ->setParameter('query', "%" . $query["query"] . "%")
-                    ->getQuery();
-                $results = $selection->getResult();
-                return $results;
-            } else {
-                $qb = $this->createQueryBuilder('g');
-                $selection = $qb->select('g')
-                    ->Where('g.title LIKE :query')
+
+        if(isset($search["players"])){
+            if ($search["players"] != "empty"){
+                $query = $query
                     ->andWhere('g.maxplayer <= :players')
-                    ->setParameter('query', "%" . $query["query"] . "%")
-                    ->setParameter('players', $query["players"])
-                    ->getQuery();
-                $results = $selection->getResult();
-                return $results;
+                    ->setParameter('players', $search["players"]);
             }
-
         }
-        elseif(count($query)==3 && isset($query["query"]) && isset($query["category"]) ) {
-            if($query["players"] == "empty") {
-                $qb = $this->createQueryBuilder('g');
-                $selection = $qb->select('g')
-                    ->Where('g.title LIKE :query')
+
+       if(isset($search["category"])){
+            if ($search["category"] != "all"){
+                $query = $query
                     ->andWhere('g.categoryID = :category')
-                    ->setParameter('query', "%" . $query["query"] . "%")
-                    ->setParameter('category', $query["category"])
-                    ->getQuery();
-                $results = $selection->getResult();
-                return $results;
-            } else {
-                $qb = $this->createQueryBuilder('g');
-                $selection = $qb->select('g')
-                    ->Where('g.title LIKE :query')
-                    ->andWhere('g.categoryID = :category')
-                    ->andWhere('g.maxplayer <= :players')
-                    ->setParameter('query', "%" . $query["query"] . "%")
-                    ->setParameter('category', $query["category"])
-                    ->setParameter('players', $query["players"])
-                    ->getQuery();
-                $results = $selection->getResult();
-                return $results;
+                    ->setParameter('category', $search["category"]);
             }
         }
-        elseif(count($query)==2 && isset($query["category"]) ) {
-            if($query["players"] == "empty"){
-                $qb = $this->createQueryBuilder('g');
-                $selection = $qb->select('g')
-                    ->Where('g.categoryID = :category')
-                    ->setParameter('category',  $query["category"] )
-                    ->getQuery();
-                $results = $selection->getResult();
-                return $results;
-            } else {
-                $qb = $this->createQueryBuilder('g');
-                $selection = $qb->select('g')
-                    ->Where('g.categoryID = :category')
-                    ->andWhere('g.maxplayer <= :players')
-                    ->setParameter('category',  $query["category"] )
-                    ->setParameter('players', $query["players"])
-                    ->getQuery();
-                $results = $selection->getResult();
-                return $results;
-            }
-        }
-
-        elseif(count($query)==1 && isset($query["players"]) ){
-            $qb = $this->createQueryBuilder('g');
-            $selection = $qb->select('g')
-                ->Where('g.maxplayer <= :players')
-                ->setParameter('players', $query["players"])
-                ->getQuery();
-            $results = $selection->getResult();
-            return $results;
-        }
-
+        return $query->getQuery();
     }
 
     public function maxPlayer(){

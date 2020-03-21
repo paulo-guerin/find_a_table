@@ -35,6 +35,11 @@ class Game
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
+    private $categoryID;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
     private $maxplayer;
 
     /**
