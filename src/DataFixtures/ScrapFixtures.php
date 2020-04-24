@@ -7,11 +7,12 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Faker\Factory;
 
-class GameFixtures extends Fixture
+class ScrapFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
         // $faker = Factory::create("fr_FR");
+        
 
         // for($i = 0; $i < 100; $i++){
         //     $game = new Game;

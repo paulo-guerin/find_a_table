@@ -86,4 +86,7 @@ class AdminController extends AbstractController
         $this->addFlash('success', "Le jeu est visible par les utilisateurs standards" );
         return $this->redirectToRoute('game_game', ['id' => $id]);
     }
+
+
+   
 }
