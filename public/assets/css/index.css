@@ -158,21 +158,9 @@
   border:black solid 3px;
 }*/
 /* Navbar responsive */
-.testDiv {
-  background-color: #1f2e49;
-  height: 150px;
-  width: 40%;
-  margin-bottom: 20px; }
-  .testDiv a {
-    color: white; }
-
-.divExtend, .divExtend--modif {
-  background-color: #1f2e49;
-  height: 150px;
-  width: 40%;
-  margin-bottom: 20px; }
-  .divExtend--modif {
-    border-radius: 20px; }
+.homebrew-container {
+  background-color: #fffaf4;
+  height: 100vh; }
 
 /* Main container du body pour les index game et session */
 main {
@@ -184,7 +172,8 @@ main {
   background-color: #fffaf4;
   border: double 3px #1f2e49;
   border-radius: 15px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  height: 100%; }
 
 .pageTitle {
   font-family: "dancingScriptBold";
@@ -282,6 +271,9 @@ main {
   padding: 0; }
 
 /* Marges globales */
+body {
+  height: 100vh; }
+
 /* Fonts */
 @font-face {
   font-family: "dancingScriptRegular";
