@@ -59,4 +59,20 @@ $(document).ready(function(){
 
 
     // Apparition des notifications en cliquant sur la cloche
+
+
+    // Autocompletion de la recherche des villes
+
+    // function keyCode() {
+    //     
+    //     var element = document.getElementById("results"); 
+    //     
+      
+    // }; 
+
+
+   
+
+
+    // Autocompletion de la recherche des villes
 });

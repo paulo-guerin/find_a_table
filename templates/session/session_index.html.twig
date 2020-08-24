@@ -10,10 +10,11 @@
                     <span>Nom du jeu</span>
                     <select name="gameID">
                         <option value="all">Tous</option>
-                        {% for game in games %}
+                        {% for game in games|sortByField('title') %}
                             <option value={{ game.id }}>{{ game.title }}</option>
                         {% endfor %}
                     </select>
+                    <br>
                     <span>Ville</span>
                     {% set townIDs = [] %}
                     {% set townNames = [] %}

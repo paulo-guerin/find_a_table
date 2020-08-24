@@ -14,6 +14,7 @@
                             <option value={{ game.id }}>{{ game.title }}</option>
                         {% endfor %}
                     </select>
+                    <br>
                     <span>Ville</span>
                     {% set townIDs = [] %}
                     {% set townNames = [] %}
@@ -51,16 +52,16 @@
         {# Display des vignettes de jeu #}
         <div class="row d-flex justify-content-between">
             {# Boucle permettant le display des jeux en vignettes #}
-            {% for session in sessions %}
-                {% if session.status == 1 and date(session.date) > date() %}
+            {% for result in results %}
+                {% if result.status == 1 and date(result.date) > date() %}
                     <div class="col-lg-6 pt-4">
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-11 sticker">
-                                <a href="{{ path("session_session", {"id":session.id}) }}" class="stickerLink">
+                                <a href="{{ path("session_session", {"id":result.id}) }}" class="stickerLink">
                                     <div class="row stickerRow">
                                         {# Image du jeu #}
                                         <div class="col-3 col-md-1 col-lg-3 stickerImg d-flex align-items-center">
-                                            <img src="{{ session.game.image }}" alt="Image du jeu de société" class="imgResize">
+                                            <img src="{{ result.game.image }}" alt="Image du jeu de société" class="imgResize">
                                         </div>
                                         {# Image du jeu #}
                                         {# Description du jeu #}
@@ -69,7 +70,7 @@
                                                 <div class="col-12">
                                                     <div class="row">
                                                         <div class="col-12 text-center">
-                                                            <h4 class="gameTitle overflow-hidden givenHeight">{{ session.game.title }}</h4>
+                                                            <h4 class="gameTitle overflow-hidden givenHeight">{{ result.game.title }}</h4>
                                                         </div>
                                                     </div>
                                                     <div class="row d-flex justify-content-between pt-1 gameDescription">
@@ -84,10 +85,10 @@
                                                     </div>
                                                     <div class="row d-flex justify-content-between gameDescription">
                                                         <div class="col-6 text-center">
-                                                            <span class="gamePictoDescription">{{ session.town.name }}</span>
+                                                            <span class="gamePictoDescription">{{ result.town.name }}</span>
                                                         </div>
                                                         <div class="col-6 text-center">
-                                                            <span class="gamePictoDescription">{{ session.date |date("d/m/Y")}}</span>
+                                                            <span class="gamePictoDescription">{{ result.date |date("d/m/Y")}}</span>
                                                         </div>
                                                     </div>
                                                     <div class="row d-flex justify-content-between pt-3 gameDescription">
@@ -102,10 +103,10 @@
                                                     </div>
                                                     <div class="row d-flex justify-content-between gameDescription">
                                                         <div class="col-6 text-center">
-                                                            <span class="gamePictoDescription">Reste {{ session.maxplayer }} </span>
+                                                            <span class="gamePictoDescription">Reste {{ result.maxplayer }} </span>
                                                         </div>
                                                         <div class="col-6 text-center">
-                                                            <span class="gamePictoDescription">{{ session.host.username }}</span>
+                                                            <span class="gamePictoDescription">{{ result.host.username }}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -117,17 +118,17 @@
                             </div>
                         </div>
                     </div>
-                {% elseif session.status == 0  %}
+                {% elseif result.status == 0  %}
                 {% if app.user %}
-                    {% if is_granted('ROLE_ADMIN') or app.user.id == session.host.id%}
+                    {% if is_granted('ROLE_ADMIN') or app.user.id == result.host.id%}
                         <div class="col-lg-6 pt-4">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-11 sticker">
-                                    <a href="{{ path("session_session", {"id":session.id}) }}" class="stickerLink">
+                                    <a href="{{ path("session_session", {"id":result.id}) }}" class="stickerLink">
                                         <div class="row stickerRed">
                                             {# Image du jeu #}
                                             <div class="col-3 col-md-1 col-lg-3 stickerImg d-flex align-items-center">
-                                                <img src="{{ session.game.image }}" alt="Image du jeu de société" class="imgResize">
+                                                <img src="{{ result.game.image }}" alt="Image du jeu de société" class="imgResize">
                                             </div>
                                             {# Image du jeu #}
                                             {# Description du jeu #}
@@ -136,7 +137,7 @@
                                                     <div class="col-12">
                                                         <div class="row">
                                                             <div class="col-12 text-center">
-                                                                <h4 class="gameTitle overflow-hidden givenHeight">{{ session.game.title }}</h4>
+                                                                <h4 class="gameTitle overflow-hidden givenHeight">{{ result.game.title }}</h4>
                                                             </div>
                                                         </div>
                                                         <div class="row d-flex justify-content-between pt-1 gameDescription">
@@ -151,10 +152,10 @@
                                                         </div>
                                                         <div class="row d-flex justify-content-between gameDescription">
                                                             <div class="col-6 text-center">
-                                                                <span class="gamePictoDescription">{{ session.town.name }}</span>
+                                                                <span class="gamePictoDescription">{{ result.town.name }}</span>
                                                             </div>
                                                             <div class="col-6 text-center">
-                                                                <span class="gamePictoDescription">{{ session.date |date("d/m/Y")}}</span>
+                                                                <span class="gamePictoDescription">{{ result.date |date("d/m/Y")}}</span>
                                                             </div>
                                                         </div>
                                                         <div class="row d-flex justify-content-between pt-3 gameDescription">
@@ -169,10 +170,10 @@
                                                         </div>
                                                         <div class="row d-flex justify-content-between gameDescription">
                                                             <div class="col-6 text-center">
-                                                                <span class="gamePictoDescription">Reste {{ session.maxplayer }} </span>
+                                                                <span class="gamePictoDescription">Reste {{ result.maxplayer }} </span>
                                                             </div>
                                                             <div class="col-6 text-center">
-                                                                <span class="gamePictoDescription">{{ session.host.username }}</span>
+                                                                <span class="gamePictoDescription">{{ result.host.username }}</span>
                                                             </div>
                                                         </div>
                                                     </div>

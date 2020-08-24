@@ -7,26 +7,23 @@
             {{ msg }}
         </div>
     {% endfor %}
+    <div class="container">
 
-    <div class="d-flex flex-wrap justify-content-around">
-        <div class="testDiv d-flex justify-content-center align-items-center">
-            <a href="#">Lien Test</a>
+        <div class="d-flex justify-content-between align-items-center pt-4 responsiveDisplay">
+            <h2 class="pageTitle pl-3">Bienvenue sur Find A Table</h2>
         </div>
+        <div class="doubleLine ml-2"></div>
+        <div class="doubleLine pt-1"></div>
 
-        <div class="testDiv d-flex justify-content-center align-items-center">
-            <a href="#">Lien Test</a>
-        </div>
-
-        <div class="testDiv d-flex justify-content-center align-items-center">
-            <a href="#">Lien Test</a>
-        </div>
-
-        <div class="testDiv d-flex justify-content-center align-items-center">
-            <a href="#">Lien Test</a>
-        </div>
     </div>
+    <br>
+    <br>
+    <div class="homebrew-container">
+    
+        <p class="text-center ">Find A Table est un site web qui te permet de découvrir des jeux de sociétés et d'organiser des sessions de jeu avec les autres utilisateurs!</p>
+        <br>
+        <p class="text-center">Pas encore inscrit? Viens rejoindre notre communautée!</p>
 
-    <div class="divExtend--modif d-flex justify-content-center align-items-center">
-        <a href="#">Lien Test</a>
+        <img src="{{ asset("assets/img/game-friends.jpg") }}" alt="Image d'un groupe d'amis jouant à un jeu de société" class="rounded mx-auto d-block">
     </div>
 {% endblock %}

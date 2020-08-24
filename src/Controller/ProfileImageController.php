@@ -45,7 +45,7 @@ class ProfileImageController extends AbstractController
                             // ... handle exception if something happens during file upload
                         }
 
-                        // updates the 'brochureFilename' property to store the PDF file name
+                        // updates the 'brochureFilename' property to store the image file name
                         // instead of its contents
                         $user->setProfilepicture($newFilename);
                         $entityManager->persist($user);

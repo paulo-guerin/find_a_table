@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.css") }}">
     <link rel="stylesheet" href="{{ asset("assets/css/index.css") }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="{{ asset('bundles/pugxautocompleter/js/autocompleter-jqueryui.js') }}"></script>
 </head>
 
 <body>
@@ -112,12 +114,12 @@
                                     {% if is_granted('ROLE_ADMIN') %}
                                         <li ><a href="{{ path("admin_index") }}" class = "text-danger">Gestion administrateur</a></li>
                                     {% endif %}
-                                    <li><a href="{{ path("fos_user_security_logout") }}" class = "text-info">Déconnection</a></li>
+                                    <li><a href="{{ path("fos_user_security_logout") }}" class = "text-info">Déconnexion</a></li>
                                 </ul>
                             {% else %}
                                 <div class="d-flex connectionBox">
                                     <a href="{{ path("fos_user_security_login") }}" class="connectionButton p-1">
-                                        <span>Connection</span>
+                                        <span>Connexion</span>
                                     </a>
                                     <a href="{{ path("fos_user_registration_register") }}" class="connectionButton p-1">
                                         <span>Inscription</span>

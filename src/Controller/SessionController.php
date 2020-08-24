@@ -113,7 +113,7 @@ class SessionController extends AbstractController
         $games = $gameRepository->findAll();
         return $this->render("session/session_index.html.twig", [
             'sessions' => $sessions,
-            'games' => $games
+            'games' => $games,
         ]);
     }
 

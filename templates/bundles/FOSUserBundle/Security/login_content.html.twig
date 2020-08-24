@@ -3,7 +3,7 @@
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
-<h2 class="pageTitle">Connection</h2>
+<h2 class="pageTitle">Connexion</h2>
 
     <form action="{{ path("fos_user_security_check") }}" method="post">
         <div class="gameShowDescription d-flex flex-column connectionBox">
